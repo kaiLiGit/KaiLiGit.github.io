@@ -1,0 +1,16 @@
+---
+layout: single
+permalink: /contact/
+title: "Let's get in touch!"
+author_profile: true
+header:
+  image: "/images/contactpage.jpg"
+---
+
+<!-- <form accept-charset="UTF-8" action="https://formkeep.com/f/XXXXXXXXXXXX" method="POST">
+  <input type="email" name="email" placeholder="Your Email">
+  <input type="text" name="name" placeholder="Your Name">
+  <input type="hidden" name="utf8" value="✓">
+  <button type="submit">Submit</button>
+</form> -->
+ 
