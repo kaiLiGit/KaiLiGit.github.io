@@ -1,55 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-26T00:54:15-04:00</updated><id>http://localhost:4000/</id><title type="html">Kai Li</title><subtitle>Data Science Portfolio</subtitle><author><name>Kai Li</name><email>natevictorlee@gmail.com</email></author><entry><title type="html">ML2</title><link href="http://localhost:4000/ML2/" rel="alternate" type="text/html" title="ML2" /><published>2018-01-28T00:00:00-05:00</published><updated>2018-01-28T00:00:00-05:00</updated><id>http://localhost:4000/ML2</id><content type="html" xml:base="http://localhost:4000/ML2/"></content><author><name>Kai Li</name><email>natevictorlee@gmail.com</email></author><category term="machine learning" /><category term="data science" /><summary type="html">Machine Learning, Perceptron, Data Science</summary></entry><entry><title type="html">Machine Learning Project: Perceptron</title><link href="http://localhost:4000/perceptron/" rel="alternate" type="text/html" title="Machine Learning Project: Perceptron" /><published>2018-01-28T00:00:00-05:00</published><updated>2018-01-28T00:00:00-05:00</updated><id>http://localhost:4000/perceptron</id><content type="html" xml:base="http://localhost:4000/perceptron/">&lt;h1 id=&quot;h1-heading&quot;&gt;H1 Heading&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-26T11:06:41-04:00</updated><id>http://localhost:4000/</id><title type="html">Kai Li</title><subtitle>Work Projects Portfolio</subtitle><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><entry><title type="html">Finding the Closest Starbucks</title><link href="http://localhost:4000/perceptron/" rel="alternate" type="text/html" title="Finding the Closest Starbucks" /><published>2016-12-01T00:00:00-05:00</published><updated>2016-12-01T00:00:00-05:00</updated><id>http://localhost:4000/perceptron</id><content type="html" xml:base="http://localhost:4000/perceptron/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;p&gt;Given a list of geological points, or locations in longitude and latitude,
+find the nearest Starbucks locations to your current location.&lt;/p&gt;
 
-&lt;h2 id=&quot;h2-heading&quot;&gt;H2 Heading&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;goal&quot;&gt;Goal:&lt;/h2&gt;
+&lt;p&gt;Using the provided list of rarely changing Starbucks locations (longitudes, latitudes) coordinates. Find and implement a data structure that solves such kind of nearest-neighbor problem.&lt;/p&gt;
 
-&lt;h3 id=&quot;h3-heading&quot;&gt;H3 Heading&lt;/h3&gt;
-
-&lt;p&gt;Here’s some basic text.&lt;/p&gt;
-
-&lt;p&gt;And here’s some &lt;em&gt;italics&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Here’s some &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;
-
-&lt;p&gt;What about a &lt;a href=&quot;https://github.com/dataoptimal&quot;&gt;link&lt;/a&gt;?&lt;/p&gt;
-
-&lt;p&gt;Here’s a bulleted list:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item&lt;/li&gt;
-  &lt;li&gt;Third item&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Here’s a numbered list:&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;ideas&quot;&gt;Ideas:&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;StudentStarbucks&lt;/code&gt; is the implmentation class and should support two operations:&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;First&lt;/li&gt;
-  &lt;li&gt;Second&lt;/li&gt;
-  &lt;li&gt;Third&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;void build(StarbucksLocation[] allStarbucks):&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;read in all Starbucks locations from a csv file. allStarbucks is a reference to an array of &lt;code class=&quot;highlighter-rouge&quot;&gt;StarbucksLocation&lt;/code&gt; objects.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;StarbucksLocation&lt;/code&gt; contains four variables: city (string), address (string), lng (-180, 180), and lat (-90, 90).&lt;/li&gt;
+      &lt;li&gt;retrieve data from csv and populate k-d tree data&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;StarbucksLocation getNearest(double lng, double lat):&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;traverse k-d tree to find the nearest Starbucks location&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Python code block:&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;numpy&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;
+&lt;hr /&gt;
 
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;test_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;z&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;:point_right: &lt;a href=&quot;https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/kdtrees.pdf&quot;&gt;Nearest Neighbor Search Pseudocode&lt;/a&gt; from CMU.&lt;/p&gt;
 
-&lt;p&gt;R code block:&lt;/p&gt;
-&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;library&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tidyverse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;some_file.csv&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
 
-&lt;p&gt;Here’s some inline code &lt;code class=&quot;highlighter-rouge&quot;&gt;x+y&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE274Project/tree/master/ClosestStarbucks/src&quot;&gt;StudentStarbucks&lt;/a&gt; in Finding the Nearest Starbucks Project GitHub Repo.&lt;/p&gt;
 
-&lt;p&gt;Here’s an image:
-&lt;img src=&quot;http://localhost:4000/images/perceptron/linsep.jpg&quot; alt=&quot;linearly separable data&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here’s another image using Kramdown:
-&lt;img src=&quot;http://localhost:4000/images/perceptron/linsep.jpg&quot; alt=&quot;alt&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here’s some math:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;z=x+y&lt;/script&gt;
-
-&lt;p&gt;You can also put it inline &lt;script type=&quot;math/tex&quot;&gt;z=x+y&lt;/script&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>natevictorlee@gmail.com</email></author><category term="machine learning" /><category term="data science" /><category term="neural network" /><summary type="html">Machine Learning, Perceptron, Data Science</summary></entry></feed>
+&lt;hr /&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="nearest-neighbor" /><category term="k-d tree" /><category term="Java" /><summary type="html">nearest-neighbor, k-d tree, Java</summary></entry></feed>

@@ -12,7 +12,7 @@ locale                   : "en-US"
 title                    : "Kai Li"
 title_separator          : "-"
 name                     : "Kai Li"
-description              : "Data Science Portfolio"
+description              : "Work Projects Portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -86,9 +86,9 @@ analytics:
 author:
   name             : "Kai Li"
   avatar           : "/images/profilepic.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Data Science Portfolio"
+  bio              : "Work Projects Portfolio"
   location         : "Shenzhen"
-  email            : natevictorlee@gmail.com
+  email            : kaivictorlee@163.com
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
   bitbucket        :
@@ -111,7 +111,7 @@ author:
   tumblr           :
   twitter          :
   vine             :
-  weibo            : 
+  weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
 

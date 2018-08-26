@@ -1,11 +1,6 @@
 var store = [{
-        "title": "Machine Learning Project: Perceptron",
-        "excerpt":"H1 HeadingH2 HeadingH3 HeadingHere’s some basic text.And here’s some italicsHere’s some bold text.What about a link?Here’s a bulleted list: First item Second item Third itemHere’s a numbered list: First Second ThirdPython code block: import numpy as np def test_function(x, y): z = np.sum(x,y) return zR code block:library(tidyverse)df &lt;- read_csv(\"some_file.csv\")head(df)Here’s some...","categories": [],
-        "tags": ["machine learning","data science","neural network"],
+        "title": "Finding the Closest Starbucks",
+        "excerpt":"Problem:Given a list of geological points, or locations in longitude and latitude,find the nearest Starbucks locations to your current location.Goal:Using the provided list of rarely changing Starbucks locations (longitudes, latitudes) coordinates. Find and implement a data structure that solves such kind of nearest-neighbor problem.Ideas:StudentStarbucks is the implmentation class and should...","categories": [],
+        "tags": ["nearest-neighbor","k-d tree","Java"],
         "url": "http://localhost:4000/perceptron/",
-        "teaser":null},{
-        "title": "ML2",
-        "excerpt":"","categories": [],
-        "tags": ["machine learning","data science"],
-        "url": "http://localhost:4000/ML2/",
         "teaser":null}]

@@ -1,64 +1,37 @@
 ---
-title: "Machine Learning Project: Perceptron"
-date: 2018-01-28
-tags: [machine learning, data science, neural network]
+title: "Finding the Closest Starbucks"
+date: 2016-12-01
+tags: [nearest-neighbor, k-d tree, Java]
 header:
-  image: "/images/perceptron/percept.jpg"
-excerpt: "Machine Learning, Perceptron, Data Science"
+  image: "/images/projectImages/neareststarbucks2.jpg"
+excerpt: "nearest-neighbor, k-d tree, Java"
 # enabling math equations rendering in markdown
 mathjax: "true"
 ---
+## Problem:
+Given a list of geological points, or locations in longitude and latitude,
+find the nearest Starbucks locations to your current location.
 
-# H1 Heading
+---
+## Goal:
+Using the provided list of rarely changing Starbucks locations (longitudes, latitudes) coordinates. Find and implement a data structure that solves such kind of nearest-neighbor problem.
 
-## H2 Heading
+---
+## Ideas:
+`StudentStarbucks` is the implmentation class and should support two operations:
+1. `void build(StarbucksLocation[] allStarbucks):`
+  * read in all Starbucks locations from a csv file. allStarbucks is a reference to an array of `StarbucksLocation` objects.
+  * `StarbucksLocation` contains four variables: city (string), address (string), lng (-180, 180), and lat (-90, 90).
+  * retrieve data from csv and populate k-d tree data
+2. `StarbucksLocation getNearest(double lng, double lat):`
+  * traverse k-d tree to find the nearest Starbucks location
 
-### H3 Heading
+---
 
-Here's some basic text.
+:point_right: [Nearest Neighbor Search Pseudocode](https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/kdtrees.pdf) from CMU.
 
-And here's some *italics*
+---
 
-Here's some **bold** text.
+:point_right: [StudentStarbucks](https://github.com/kaiLiGit/CSE274Project/tree/master/ClosestStarbucks/src) in Finding the Nearest Starbucks Project GitHub Repo.
 
-What about a [link](https://github.com/dataoptimal)?
-
-Here's a bulleted list:
-* First item
-+ Second item
-- Third item
-
-Here's a numbered list:
-1. First
-2. Second
-3. Third
-
-Python code block:
-```python
-    import numpy as np
-
-    def test_function(x, y):
-      z = np.sum(x,y)
-      return z
-```
-
-R code block:
-```r
-library(tidyverse)
-df <- read_csv("some_file.csv")
-head(df)
-```
-
-Here's some inline code `x+y`.
-
-Here's an image:
-<img src="{{ site.url }}{{ site.baseurl }}/images/perceptron/linsep.jpg" alt="linearly separable data">
-
-Here's another image using Kramdown:
-![alt]({{ site.url }}{{ site.baseurl }}/images/perceptron/linsep.jpg)
-
-Here's some math:
-
-$$z=x+y$$
-
-You can also put it inline $$z=x+y$$
+___
