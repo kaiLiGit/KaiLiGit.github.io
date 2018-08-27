@@ -23,7 +23,7 @@ Most importantly, I am committed to my passion in information technology and mai
 an inquisitive mind to learn new things.
 
 # Awards
-High School Honor List mentioned (2012) :black_circle:
+High School Honor List mentioned (Lake Worth Christian School, 2012) :black_circle:
 The Society for Collegiate Leadership & Achievement Award :black_circle:
 Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_circle:
 2nd Best Senior Design Award, Computer Science division (2018)
