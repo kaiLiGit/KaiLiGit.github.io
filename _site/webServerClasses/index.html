@@ -121,22 +121,22 @@
           
             
             <li class="masthead__menu-item">
-              <a href="http://localhost:4000/about/" >About</a>
+              <a href="http://localhost:4000/about/">About</a>
             </li>
           
             
             <li class="masthead__menu-item">
-              <a href="http://localhost:4000/projects/" >Projects</a>
+              <a href="http://localhost:4000/projects/">Projects</a>
             </li>
           
             
             <li class="masthead__menu-item">
-              <a href="http://localhost:4000/resume/" >Résumé</a>
+              <a href="http://localhost:4000/resume/">Résumé</a>
             </li>
           
             
             <li class="masthead__menu-item">
-              <a href="http://localhost:4000/contact/" >Contact</a>
+              <a href="http://localhost:4000/contact/">Contact</a>
             </li>
           
         </ul>
@@ -165,9 +165,7 @@
 
 
 
-<div class="page__hero"
-  style=" "
->
+<div class="page__hero" style=" ">
   
     <img src="http://localhost:4000/images/projectImages/webServerClass.jpg" alt="Web Server Class" class="page__hero-image">
   
@@ -221,7 +219,7 @@
       
         <li>
           <a href="mailto:kaivictorlee@163.com">
-            <meta itemprop="email" content="kaivictorlee@163.com" />
+            <meta itemprop="email" content="kaivictorlee@163.com">
             <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
           </a>
         </li>
@@ -317,7 +315,7 @@
 
 
 
-  less than 1 minute read
+  1 minute read
 </p>
           
         </header>
@@ -328,18 +326,19 @@
         <h2 id="problem">Problem:</h2>
 <p>Implement a basic server class that can serve as a web-server that respond to a <em>GET</em> request for a file path.</p>
 
-<hr />
+<hr>
 <h2 id="goal">Goal:</h2>
 <ul>
   <li>Make use of server socket methods from boost library</li>
   <li>Develop a basic web server to serve text, html, png, and jpeg files</li>
 </ul>
 
-<hr />
+<hr>
 <h2 id="ideas">Ideas:</h2>
 <p><em>GET</em> request received in such format: <code class="highlighter-rouge">GET file HTTP/1.1</code></p>
 <ul>
-  <li><em>file</em> is <em>/</em> should respond with contents of given index.html</li>
+  <li>
+<em>file</em> is <em>/</em> should respond with contents of given index.html</li>
   <li>valid <em>file</em> path indicates such file is readable and the server should respond with the <em>file</em>’s contents and appropriate HTTP headers &amp; MIME type for the file derived from the <em>file</em> name extension. The contents of the file can be sent to client by the server line-by-line.</li>
 </ul>
 
@@ -379,10 +378,48 @@
    Example:</li>
 </ul>
 
-<hr />
+<hr>
+<p>HTTP/1.1 404 Not Found
+Server: SimpleServer
+Content-Length: 47</p>
 
-<p><img src="https://github.com/kaiLiGit/kaiLiGit.github.io/blob/master/images/projectImages/unreadblefile.png" alt="alt text" />
-   ___</p>
+<p>The following file was not found: data/blah.txt</p>
+
+<hr>
+
+<ul>
+  <li>Funtional testing
+    <ul>
+      <li>run the executable after compilation of the server program</li>
+      <li>make use of <code class="highlighter-rouge">wget</code> command in Linux environment (wget serves as web-browser to GET data from any valid URL)</li>
+      <li>The <code class="highlighter-rouge">-S</code> option tells <code class="highlighter-rouge">wget</code> to print headers sent by the web-browser</li>
+      <li>The <code class="highlighter-rouge">-q</code> option tells <code class="highlighter-rouge">wget</code> to be as quiet (not to print additional info)</li>
+      <li>The <code class="highlighter-rouge">-O</code> option tells <code class="highlighter-rouge">wget</code> to write the data from the web-server to a given file.</li>
+    </ul>
+
+    <ol>
+      <li>
+        <p><code class="highlighter-rouge">wget - S "http://ceclnx01.cec.miamioh.edu:Port/Path" -O my_Path 2&gt; my_Path_hdrs.txt</code></p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">diff my_Path Path</code></p>
+      </li>
+      <li>
+        <p><code class="highlighter-rouge">diff my_Path_hdrs.txt Path_hdrs.txt</code></p>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<hr>
+<p>Server Class implementation:
+<img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/CSE278Project/blob/master/Project4/Server.cpp">Server.cpp</a></p>
+
+<p>Server Class declaration:
+<img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/CSE278Project/blob/master/Project4/Server.h">Server.h</a></p>
+
+<p>Main.cpp for testing purpose:
+<img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/CSE278Project/blob/master/Project4/main.cpp">main.cpp</a></p>
 
         
       </section>
@@ -431,7 +468,7 @@
 
   <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2FwebServerClasses%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2FwebServerClasses%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2FwebServerClasses%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
@@ -457,6 +494,33 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/imageSearching/" rel="permalink">Image Search Program
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">OpenMp, Image Processing, C++
+</p>
+  </article>
+</div>
         
           
 
@@ -565,7 +629,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2018 Kai Li. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2018 Kai Li. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -581,8 +645,7 @@
 
 
 
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 

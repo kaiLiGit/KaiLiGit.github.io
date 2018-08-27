@@ -33,7 +33,34 @@ ___
    * In cases of unreadable *file* path, the server program should respond with the following HTTP 404 error response and body. The content length and file name would change based on the appropriate *file* specified in the *GET* request.
    Example:
 
-   ___
+___
+HTTP/1.1 404 Not Found
+Server: SimpleServer
+Content-Length: 47
 
-   ![alt text](https://github.com/kaiLiGit/kaiLiGit.github.io/blob/master/images/projectImages/unreadblefile.png)
-   ___
+The following file was not found: data/blah.txt
+
+___
+
+  * Funtional testing
+    - run the executable after compilation of the server program
+    - make use of `wget` command in Linux environment (wget serves as web-browser to GET data from any valid URL)
+    - The `-S` option tells `wget` to print headers sent by the web-browser
+    - The `-q` option tells `wget` to be as quiet (not to print additional info)
+    - The `-O` option tells `wget` to write the data from the web-server to a given file.
+
+    1. `wget - S "http://ceclnx01.cec.miamioh.edu:Port/Path" -O my_Path 2> my_Path_hdrs.txt`
+
+    2. `diff my_Path Path`
+
+    3. `diff my_Path_hdrs.txt Path_hdrs.txt`
+
+___
+Server Class implementation:
+:point_right: [Server.cpp](https://github.com/kaiLiGit/CSE278Project/blob/master/Project4/Server.cpp)
+
+Server Class declaration:
+:point_right: [Server.h](https://github.com/kaiLiGit/CSE278Project/blob/master/Project4/Server.h)
+
+Main.cpp for testing purpose:
+:point_right: [main.cpp](https://github.com/kaiLiGit/CSE278Project/blob/master/Project4/main.cpp)

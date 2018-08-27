@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-27T07:57:19-04:00</updated><id>http://localhost:4000/</id><title type="html">Kai Li</title><subtitle>Work Projects Portfolio</subtitle><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><entry><title type="html">Finding the Closest Starbucks</title><link href="http://localhost:4000/nearestStarbucks/" rel="alternate" type="text/html" title="Finding the Closest Starbucks" /><published>2016-12-01T00:00:00-05:00</published><updated>2016-12-01T00:00:00-05:00</updated><id>http://localhost:4000/nearestStarbucks</id><content type="html" xml:base="http://localhost:4000/nearestStarbucks/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-27T11:04:00-04:00</updated><id>http://localhost:4000/</id><title type="html">Kai Li</title><subtitle>Work Projects Portfolio</subtitle><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><entry><title type="html">Image Search Program</title><link href="http://localhost:4000/imageSearching/" rel="alternate" type="text/html" title="Image Search Program" /><published>2017-10-01T00:00:00-04:00</published><updated>2017-10-01T00:00:00-04:00</updated><id>http://localhost:4000/imageSearching</id><content type="html" xml:base="http://localhost:4000/imageSearching/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;p&gt;Develop a simple image search program, i.e., simple algorithmic implmentation, moving
+the mask image row-by-row and column-by-column from left-to-right and top-to-bottom.
+Each matched image (.png format in [red, green, blue, alpha]) region in the larger
+image would be surrounded with a red box.
+&lt;img src=&quot;http://localhost:4000/images/projectImages/imgSearchExample.png&quot; alt=&quot;Image Search Example&quot; /&gt;
+&lt;a href=&quot;https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/Homework7.pdf&quot;&gt;Detailed Project/HW info&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;goal&quot;&gt;Goal:&lt;/h2&gt;
+&lt;p&gt;The emphasis lies in parallelism (OpenMP) that is to divide up this simple time-consuming algorithmic
+approach to a computing cluster (Red Hawk cluster, used at Miami University in my case) to
+speed up the image search processing.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.openmp.org/&quot;&gt;OpenMP&lt;/a&gt;:
+    &lt;blockquote&gt;
+      &lt;p&gt;The OpenMP API supports multi-platform shared-memory parallel programming in C/C++.
+The OpenMP API defines a portable, scalable model with a simple and flexible interface
+for developing parallel applications on platforms from the desktop to the supercomputer.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ideas&quot;&gt;Ideas&lt;/h2&gt;
+&lt;p&gt;The parallelizing strategy boils down to understanding how to allocate individual tasks (or the
+number of images / region matches) each thread has to do in the original pictures.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Two nested for-loops are used to iterate the original image and a region of the original image
+is “cropped” as large as mask image, and the cropped region is moved one pixel at a time row-by-row
+and column-by-column manner whenever the inner for-loop is executing, this we could visualized as one thread may be
+responsible one or more of these column iterations in the inner for-loop at a particular column.
+    &lt;blockquote&gt;
+      &lt;p&gt;Depending on the number of threads, each thread may be assigned to different number of rows of
+iterations moving the cropped images column by column in that row. In this case, OpenMP for
+directive will implicitly deal with the intricacies of allocating number of rows of pixels to the
+thread to move the cropped image column by column. OpenMP &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; directive will also take care of the
+index bounds accordingly while allocating the number of rows or columns to each thread.
+Since the cropped region and mask image are always the same or constant during the iterations of
+the beginning two nested for-loops when used to calculate background averages and same shade matching,
+we would just leave them as is. However, the matching pixel regions need to be stored in a list
+and such list is shared data among all the threads, therefore we would create critical sections for
+the list whenever it is being accessed or modified.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/lik7_HW7_Report.pdf&quot;&gt;My organized HW report&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;implementation&quot;&gt;Implementation&lt;/h2&gt;
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/lik7_ImageSearch.cpp&quot;&gt;ImageSearch.cpp solution&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;:point_right:  &lt;a href=&quot;https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/Color.cpp&quot;&gt;color.cpp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/ImageProcess.cpp&quot;&gt;ImageProcess.cpp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/lik7_HW7_Report.pdf&quot;&gt;Program Report&lt;/a&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="OpenMp" /><category term="Image Processing" /><category term="C++" /><summary type="html">OpenMp, Image Processing, C++</summary></entry><entry><title type="html">Finding the Closest Starbucks</title><link href="http://localhost:4000/nearestStarbucks/" rel="alternate" type="text/html" title="Finding the Closest Starbucks" /><published>2016-12-01T00:00:00-05:00</published><updated>2016-12-01T00:00:00-05:00</updated><id>http://localhost:4000/nearestStarbucks</id><content type="html" xml:base="http://localhost:4000/nearestStarbucks/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 &lt;p&gt;Given a list of geological points, or locations in longitude and latitude,
 find the nearest Starbucks locations to your current location.&lt;/p&gt;
 
@@ -88,9 +144,47 @@ find the nearest Starbucks locations to your current location.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
+&lt;p&gt;HTTP/1.1 404 Not Found
+Server: SimpleServer
+Content-Length: 47&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/kaiLiGit/kaiLiGit.github.io/blob/master/images/projectImages/unreadblefile.png&quot; alt=&quot;alt text&quot; /&gt;
-   ___&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="server socket" /><category term="C++" /><summary type="html">server socket, C++</summary></entry><entry><title type="html">Tweets to HTML</title><link href="http://localhost:4000/tweet2html/" rel="alternate" type="text/html" title="Tweets to HTML" /><published>2016-11-01T00:00:00-04:00</published><updated>2016-11-01T00:00:00-04:00</updated><id>http://localhost:4000/tweet2html</id><content type="html" xml:base="http://localhost:4000/tweet2html/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;p&gt;The following file was not found: data/blah.txt&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Funtional testing
+    &lt;ul&gt;
+      &lt;li&gt;run the executable after compilation of the server program&lt;/li&gt;
+      &lt;li&gt;make use of &lt;code class=&quot;highlighter-rouge&quot;&gt;wget&lt;/code&gt; command in Linux environment (wget serves as web-browser to GET data from any valid URL)&lt;/li&gt;
+      &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;-S&lt;/code&gt; option tells &lt;code class=&quot;highlighter-rouge&quot;&gt;wget&lt;/code&gt; to print headers sent by the web-browser&lt;/li&gt;
+      &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;-q&lt;/code&gt; option tells &lt;code class=&quot;highlighter-rouge&quot;&gt;wget&lt;/code&gt; to be as quiet (not to print additional info)&lt;/li&gt;
+      &lt;li&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;-O&lt;/code&gt; option tells &lt;code class=&quot;highlighter-rouge&quot;&gt;wget&lt;/code&gt; to write the data from the web-server to a given file.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;wget - S &quot;http://ceclnx01.cec.miamioh.edu:Port/Path&quot; -O my_Path 2&amp;gt; my_Path_hdrs.txt&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;diff my_Path Path&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;diff my_Path_hdrs.txt Path_hdrs.txt&lt;/code&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Server Class implementation:
+:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE278Project/blob/master/Project4/Server.cpp&quot;&gt;Server.cpp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Server Class declaration:
+:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE278Project/blob/master/Project4/Server.h&quot;&gt;Server.h&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Main.cpp for testing purpose:
+:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE278Project/blob/master/Project4/main.cpp&quot;&gt;main.cpp&lt;/a&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="server socket" /><category term="C++" /><summary type="html">server socket, C++</summary></entry><entry><title type="html">Tweets to HTML</title><link href="http://localhost:4000/tweet2html/" rel="alternate" type="text/html" title="Tweets to HTML" /><published>2016-11-01T00:00:00-04:00</published><updated>2016-11-01T00:00:00-04:00</updated><id>http://localhost:4000/tweet2html</id><content type="html" xml:base="http://localhost:4000/tweet2html/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 &lt;p&gt;Given tweets in text, process the string of texts (words consists of characters)
 into HTML format.&lt;/p&gt;
 
