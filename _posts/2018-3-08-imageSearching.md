@@ -46,14 +46,12 @@ number of images / region matches) each thread has to do in the original picture
 > and such list is shared data among all the threads, therefore we would create critical sections for
 > the list whenever it is being accessed or modified.
 
-:point_right: [My organized HW report](https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/lik7_HW7_Report.pdf)
-
 ___
 ## Implementation
 :point_right: [ImageSearch.cpp solution](https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/lik7_ImageSearch.cpp)
 
-:point_right:  [color.cpp](https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/Color.cpp)
+:point_right: [color.cpp](https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/Color.cpp)
 
 :point_right: [ImageProcess.cpp](https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/ImageProcess.cpp)
 
-:point_right: [Program Report](https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/lik7_HW7_Report.pdf)
+:point_right: [My Program Report after functional testing](https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/lik7_HW7_Report.pdf)
