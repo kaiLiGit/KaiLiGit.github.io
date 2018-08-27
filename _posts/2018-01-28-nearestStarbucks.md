@@ -27,11 +27,12 @@ Using the provided list of rarely changing Starbucks locations (longitudes, lati
   * traverse k-d tree to find the nearest Starbucks location
 
 ---
+## Implementation:
 
 :point_right: [Nearest Neighbor Search Pseudocode](https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/kdtrees.pdf) from CMU.
 
 ---
 
-:point_right: [StudentStarbucks](https://github.com/kaiLiGit/CSE274Project/tree/master/ClosestStarbucks/src) in Finding the Nearest Starbucks Project GitHub Repo.
+:point_right: [StudentStarbucks.java](https://github.com/kaiLiGit/CSE274Project/tree/master/ClosestStarbucks/src) code in *Finding the Nearest Starbucks* Project GitHub Repo.
 
 ___

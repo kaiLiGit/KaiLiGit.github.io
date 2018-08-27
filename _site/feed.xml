@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-26T11:06:41-04:00</updated><id>http://localhost:4000/</id><title type="html">Kai Li</title><subtitle>Work Projects Portfolio</subtitle><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><entry><title type="html">Finding the Closest Starbucks</title><link href="http://localhost:4000/perceptron/" rel="alternate" type="text/html" title="Finding the Closest Starbucks" /><published>2016-12-01T00:00:00-05:00</published><updated>2016-12-01T00:00:00-05:00</updated><id>http://localhost:4000/perceptron</id><content type="html" xml:base="http://localhost:4000/perceptron/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-27T06:00:06-04:00</updated><id>http://localhost:4000/</id><title type="html">Kai Li</title><subtitle>Work Projects Portfolio</subtitle><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><entry><title type="html">Finding the Closest Starbucks</title><link href="http://localhost:4000/nearestStarbucks/" rel="alternate" type="text/html" title="Finding the Closest Starbucks" /><published>2016-12-01T00:00:00-05:00</published><updated>2016-12-01T00:00:00-05:00</updated><id>http://localhost:4000/nearestStarbucks</id><content type="html" xml:base="http://localhost:4000/nearestStarbucks/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 &lt;p&gt;Given a list of geological points, or locations in longitude and latitude,
 find the nearest Starbucks locations to your current location.&lt;/p&gt;
 
@@ -25,11 +25,71 @@ find the nearest Starbucks locations to your current location.&lt;/p&gt;
 &lt;/ol&gt;
 
 &lt;hr /&gt;
+&lt;h2 id=&quot;implementation&quot;&gt;Implementation:&lt;/h2&gt;
 
 &lt;p&gt;:point_right: &lt;a href=&quot;https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/kdtrees.pdf&quot;&gt;Nearest Neighbor Search Pseudocode&lt;/a&gt; from CMU.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE274Project/tree/master/ClosestStarbucks/src&quot;&gt;StudentStarbucks&lt;/a&gt; in Finding the Nearest Starbucks Project GitHub Repo.&lt;/p&gt;
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE274Project/tree/master/ClosestStarbucks/src&quot;&gt;StudentStarbucks.java&lt;/a&gt; code in &lt;em&gt;Finding the Nearest Starbucks&lt;/em&gt; Project GitHub Repo.&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="nearest-neighbor" /><category term="k-d tree" /><category term="Java" /><summary type="html">nearest-neighbor, k-d tree, Java</summary></entry></feed>
+&lt;hr /&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="nearest-neighbor" /><category term="k-d tree" /><category term="Java" /><summary type="html">nearest-neighbor, k-d tree, Java</summary></entry><entry><title type="html">Tweets to HTML</title><link href="http://localhost:4000/tweet2html/" rel="alternate" type="text/html" title="Tweets to HTML" /><published>2016-11-01T00:00:00-04:00</published><updated>2016-11-01T00:00:00-04:00</updated><id>http://localhost:4000/tweet2html</id><content type="html" xml:base="http://localhost:4000/tweet2html/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;Given tweets in text, process the string of texts (words consists of characters)
+into HTML format.&lt;/p&gt;
+
+&lt;h2 id=&quot;goal&quot;&gt;Goal&lt;/h2&gt;
+&lt;p&gt;Same as the problem requested, converts specific elements on a standard tweet into HTML format.&lt;/p&gt;
+
+&lt;h2 id=&quot;ideas&quot;&gt;Ideas&lt;/h2&gt;
+&lt;p&gt;There needs to be some pre-defined formats such that we could follow in our implementation of the tweet to html.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Each tweet should be wrapped around by HTML div tag (with CSS class tweet)
+    &lt;ul&gt;
+      &lt;li&gt;Texts should be placed in between &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;div class=&quot;tweet&quot;&amp;gt;&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;/div&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Convert tweet handle of the form &lt;code class=&quot;highlighter-rouge&quot;&gt;@xyz&lt;/code&gt; to HTML anchors of the form:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;a href=&quot;https://www.twitter.com/xyz&quot;&amp;gt;@xyz&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Another example: &lt;em&gt;@miamiuniversity&lt;/em&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;a href=&quot;https://www.twitter.com/miamiuniversity&quot;&amp;gt;@miamiuniversity&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Convert &lt;code class=&quot;highlighter-rouge&quot;&gt;#abc&lt;/code&gt; to html anchor of the form:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;a href=&quot;https://www.twitter.com/hashtag/abc&quot;&amp;gt;#abc&amp;lt;/a&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+      &lt;li&gt;Another example: &lt;code class=&quot;highlighter-rouge&quot;&gt;#LoveAndHonor&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;a href=&quot;https://www.twitter.com/hashtag/LoveAndHonor&quot;&amp;gt;#LoveAndHonor&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Convert emoticons to html image tags:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:-)&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img src=&quot;http://ceclnx01.cec.miamioh.edu/~raodm/hw3/smile.png&quot;&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:-(&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img src=&quot;http://ceclnx01.cec.miamioh.edu/~raodm/hw3/frown.png&quot;&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:-|&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img src=&quot;http://ceclnx01.cec.miamioh.edu/~raodm/hw3/normal.png&quot;&amp;gt;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;:++&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;img src=&quot;http://ceclnx01.cec.miamioh.edu/~raodm/hw3/cpp.png&quot;&amp;gt;&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Functional testings (done using Linux command lines)
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ ./tweet2html base_inputs.txt base_output.html&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ diff base_output.html expected_base_output.html&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tweet2html&lt;/code&gt;, the executable of this project&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;base_inputs.txt&lt;/code&gt;, input file; &lt;code class=&quot;highlighter-rouge&quot;&gt;base_output.html&lt;/code&gt;, output file&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;diff&lt;/code&gt; command for testing the outcome of the program against the expected output&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;One more testing example:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ ./tweet2html tweet_inputs.txt tweet_output.html&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$ diff twee_output.html expected_tweet_output.html&lt;/code&gt;
+___
+Header file omitted, and is essentially a simple derivation from the &lt;em&gt;.cpp&lt;/em&gt; methods’ signature.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE278Project/blob/master/Project2/Tweet2Html.cpp&quot;&gt;Tweet2Html.cpp&lt;/a&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="string-processing" /><category term="C++" /><summary type="html">string-processing, C++</summary></entry></feed>

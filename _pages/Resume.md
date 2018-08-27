@@ -121,6 +121,6 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; :small_blue_diamond: Pitched promising tech stocks to student panelists and investors using virtual money bills
 
 <!--Back to the top button HTML begins -->
-<a href="#page-title" class="back-to-top" onclick= "topFunction()">Back to The Top &uarr;</a>:rocket:
+<!-- <a href="#page-title" class="back-to-top" onclick= "topFunction()">Back to The Top &uarr;</a>:rocket: -->
 <button onclick="topFunction()" id="myBtn" title="Go to top">Go back to the top</button>
 <!--Back to the top button HTML ends -->

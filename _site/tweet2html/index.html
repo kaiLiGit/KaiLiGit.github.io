@@ -9,40 +9,40 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Finding the Closest Starbucks - Kai Li</title>
-<meta name="description" content="nearest-neighbor, k-d tree, Java">
+<!-- begin _includes/seo.html --><title>Tweets to HTML - Kai Li</title>
+<meta name="description" content="string-processing, C++">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Kai Li">
-<meta property="og:title" content="Finding the Closest Starbucks">
-<meta property="og:url" content="http://localhost:4000/perceptron/">
+<meta property="og:title" content="Tweets to HTML">
+<meta property="og:url" content="http://localhost:4000/tweet2html/">
 
 
-  <meta property="og:description" content="nearest-neighbor, k-d tree, Java">
-
-
-
-  <meta property="og:image" content="http://localhost:4000/images/projectImages/neareststarbucks2.jpg">
+  <meta property="og:description" content="string-processing, C++">
 
 
 
-
-
-  <meta property="article:published_time" content="2016-12-01T00:00:00-05:00">
+  <meta property="og:image" content="http://localhost:4000/images/projectImages/tweet2html.jpg">
 
 
 
 
 
-  
+  <meta property="article:published_time" content="2016-11-01T00:00:00-04:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/perceptron/">
+
+<link rel="canonical" href="http://localhost:4000/tweet2html/">
 
 
 
@@ -167,7 +167,7 @@
 
 <div class="page__hero" style=" ">
   
-    <img src="http://localhost:4000/images/projectImages/neareststarbucks2.jpg" alt="Finding the Closest Starbucks" class="page__hero-image">
+    <img src="http://localhost:4000/images/projectImages/tweet2html.jpg" alt="Tweets to HTML" class="page__hero-image">
   
   
 </div>
@@ -299,15 +299,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Finding the Closest Starbucks">
-    <meta itemprop="description" content="nearest-neighbor, k-d tree, Java">
-    <meta itemprop="datePublished" content="December 01, 2016">
+    <meta itemprop="headline" content="Tweets to HTML">
+    <meta itemprop="description" content="string-processing, C++">
+    <meta itemprop="datePublished" content="November 01, 2016">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Finding the Closest Starbucks
+          <h1 class="page__title" itemprop="headline">Tweets to HTML
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -315,7 +315,7 @@
 
 
 
-  less than 1 minute read
+  1 minute read
 </p>
           
         </header>
@@ -323,44 +323,81 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="problem">Problem:</h2>
-<p>Given a list of geological points, or locations in longitude and latitude,
-find the nearest Starbucks locations to your current location.</p>
+        <h2 id="problem">Problem</h2>
+<p>Given tweets in text, process the string of texts (words consists of characters)
+into HTML format.</p>
 
-<hr>
-<h2 id="goal">Goal:</h2>
-<p>Using the provided list of rarely changing Starbucks locations (longitudes, latitudes) coordinates. Find and implement a data structure that solves such kind of nearest-neighbor problem.</p>
+<h2 id="goal">Goal</h2>
+<p>Same as the problem requested, converts specific elements on a standard tweet into HTML format.</p>
 
-<hr>
-<h2 id="ideas">Ideas:</h2>
-<p><code class="highlighter-rouge">StudentStarbucks</code> is the implmentation class and should support two operations:</p>
+<h2 id="ideas">Ideas</h2>
+<p>There needs to be some pre-defined formats such that we could follow in our implementation of the tweet to html.</p>
 <ol>
-  <li>
-<code class="highlighter-rouge">void build(StarbucksLocation[] allStarbucks):</code>
+  <li>Each tweet should be wrapped around by HTML div tag (with CSS class tweet)
     <ul>
-      <li>read in all Starbucks locations from a csv file. allStarbucks is a reference to an array of <code class="highlighter-rouge">StarbucksLocation</code> objects.</li>
-      <li>
-<code class="highlighter-rouge">StarbucksLocation</code> contains four variables: city (string), address (string), lng (-180, 180), and lat (-90, 90).</li>
-      <li>retrieve data from csv and populate k-d tree data</li>
+      <li>Texts should be placed in between <code class="highlighter-rouge">&lt;div class="tweet"&gt;</code> and <code class="highlighter-rouge">&lt;/div&gt;</code>.</li>
     </ul>
   </li>
-  <li>
-<code class="highlighter-rouge">StarbucksLocation getNearest(double lng, double lat):</code>
+  <li>Convert tweet handle of the form <code class="highlighter-rouge">@xyz</code> to HTML anchors of the form:
     <ul>
-      <li>traverse k-d tree to find the nearest Starbucks location</li>
+      <li><code class="highlighter-rouge">&lt;a href="https://www.twitter.com/xyz"&gt;@xyz&lt;/a&gt;</code></li>
+      <li>Another example: <em>@miamiuniversity</em> to <code class="highlighter-rouge">&lt;a href="https://www.twitter.com/miamiuniversity"&gt;@miamiuniversity&lt;/a&gt;</code>
+</li>
+    </ul>
+  </li>
+  <li>Convert <code class="highlighter-rouge">#abc</code> to html anchor of the form:
+    <ul>
+      <li>
+<code class="highlighter-rouge">&lt;a href="https://www.twitter.com/hashtag/abc"&gt;#abc&lt;/a&gt;</code>.</li>
+      <li>Another example: <code class="highlighter-rouge">#LoveAndHonor</code> to <code class="highlighter-rouge">&lt;a href="https://www.twitter.com/hashtag/LoveAndHonor"&gt;#LoveAndHonor&lt;/a&gt;</code>
+</li>
+    </ul>
+  </li>
+  <li>Convert emoticons to html image tags:
+    <ul>
+      <li>
+<code class="highlighter-rouge">:-)</code> to <code class="highlighter-rouge">&lt;img src="http://ceclnx01.cec.miamioh.edu/~raodm/hw3/smile.png"&gt;</code>
+</li>
+      <li>
+<code class="highlighter-rouge">:-(</code> to <code class="highlighter-rouge">&lt;img src="http://ceclnx01.cec.miamioh.edu/~raodm/hw3/frown.png"&gt;</code>
+</li>
+      <li>
+<code class="highlighter-rouge">:-|</code> to <code class="highlighter-rouge">&lt;img src="http://ceclnx01.cec.miamioh.edu/~raodm/hw3/normal.png"&gt;</code>
+</li>
+      <li>
+<code class="highlighter-rouge">:++</code> to <code class="highlighter-rouge">&lt;img src="http://ceclnx01.cec.miamioh.edu/~raodm/hw3/cpp.png"&gt;</code>
+</li>
+    </ul>
+  </li>
+  <li>Functional testings (done using Linux command lines)
+    <ul>
+      <li><code class="highlighter-rouge">$ ./tweet2html base_inputs.txt base_output.html</code></li>
+      <li><code class="highlighter-rouge">$ diff base_output.html expected_base_output.html</code></li>
+    </ul>
+    <ul>
+      <li>
+<code class="highlighter-rouge">tweet2html</code>, the executable of this project</li>
+      <li>
+<code class="highlighter-rouge">base_inputs.txt</code>, input file; <code class="highlighter-rouge">base_output.html</code>, output file</li>
+      <li>
+<code class="highlighter-rouge">diff</code> command for testing the outcome of the program against the expected output</li>
     </ul>
   </li>
 </ol>
 
-<hr>
+<ul>
+  <li>One more testing example:
+    <ul>
+      <li><code class="highlighter-rouge">$ ./tweet2html tweet_inputs.txt tweet_output.html</code></li>
+      <li>
+<code class="highlighter-rouge">$ diff twee_output.html expected_tweet_output.html</code>
+___
+Header file omitted, and is essentially a simple derivation from the <em>.cpp</em> methods’ signature.</li>
+    </ul>
+  </li>
+</ul>
 
-<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/kdtrees.pdf">Nearest Neighbor Search Pseudocode</a> from CMU.</p>
-
-<hr>
-
-<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/CSE274Project/tree/master/ClosestStarbucks/src">StudentStarbucks</a> in Finding the Nearest Starbucks Project GitHub Repo.</p>
-
-<hr>
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/CSE278Project/blob/master/Project2/Tweet2Html.cpp">Tweet2Html.cpp</a></p>
 
         
       </section>
@@ -381,15 +418,11 @@ find the nearest Starbucks locations to your current location.</p>
     
       
       
-      <a href="http://localhost:4000/tags/#java" class="page__taxonomy-item" rel="tag">Java</a><span class="sep">, </span>
+      <a href="http://localhost:4000/tags/#c" class="page__taxonomy-item" rel="tag">C++</a><span class="sep">, </span>
     
       
       
-      <a href="http://localhost:4000/tags/#k-d-tree" class="page__taxonomy-item" rel="tag">k-d tree</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#nearest-neighbor" class="page__taxonomy-item" rel="tag">nearest-neighbor</a>
+      <a href="http://localhost:4000/tags/#string-processing" class="page__taxonomy-item" rel="tag">string-processing</a>
     
     </span>
   </p>
@@ -398,7 +431,7 @@ find the nearest Starbucks locations to your current location.</p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-12-01T00:00:00-05:00">December 01, 2016</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-11-01T00:00:00-04:00">November 01, 2016</time></p>
         
       </footer>
 
@@ -407,17 +440,27 @@ find the nearest Starbucks locations to your current location.</p>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Finding+the+Closest+Starbucks%20http%3A%2F%2Flocalhost%3A4000%2Fperceptron%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Tweets+to+HTML%20http%3A%2F%2Flocalhost%3A4000%2Ftweet2html%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fperceptron%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftweet2html%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fperceptron%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Ftweet2html%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2Fperceptron%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2Ftweet2html%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="http://localhost:4000/nearestStarbucks/" class="pagination--pager" title="Finding the Closest Starbucks
+">Next</a>
+    
+  </nav>
+
     </div>
 
     
@@ -438,7 +481,7 @@ find the nearest Starbucks locations to your current location.</p>
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/perceptron/" rel="permalink">Finding the Closest Starbucks
+        <a href="http://localhost:4000/nearestStarbucks/" rel="permalink">Finding the Closest Starbucks
 </a>
       
     </h2>
@@ -458,6 +501,7 @@ find the nearest Starbucks locations to your current location.</p>
         
       </div>
     </div>
+  
   
 
   <!-- Back to the top javascript begins -->
