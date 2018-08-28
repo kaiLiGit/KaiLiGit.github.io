@@ -18,4 +18,19 @@ var store = [{
         "excerpt":"Problem:Develop a simple image search program, i.e., simple algorithmic implmentation, movingthe mask image row-by-row and column-by-column from left-to-right and top-to-bottom.Each matched image (.png format in [red, green, blue, alpha]) region in the largerimage would be surrounded with a red box.Detailed Project/HW infoGoal:The emphasis lies in parallelism (OpenMP) that is to...","categories": [],
         "tags": ["OpenMp","Image Processing","C++"],
         "url": "http://localhost:4000/imageSearching/",
+        "teaser":null},{
+        "title": "Interpreter Program",
+        "excerpt":"Problem:Given a Z+-, a made-up language, translate and execute a sequence of instructionswritten in such language using a high-level language. I picked Java in for this program. Here one example of Z+- program text file.:point_right: More .zpm input files listed in repoGoal:Translate and Execute Z+- using a high-level language.Ideas: Read...","categories": [],
+        "tags": ["Interpreter Implementation","Java"],
+        "url": "http://localhost:4000/basicInterpreter/",
+        "teaser":null},{
+        "title": "Mail Merge Program",
+        "excerpt":"Problem:Given some .tsv files and .tmp, where .tsv file is tab-separated with values populated for each attribute and .tmp is a form letter which has embedded code to be replaced by each corresponding value of the attribute for each mail recipient.a.tsv instance:a.tmp instance:More info on mail-merge programGoals:The goal of this...","categories": [],
+        "tags": ["Python","C-sharp","script-language","regular-expression"],
+        "url": "http://localhost:4000/mailMergePro/",
+        "teaser":null},{
+        "title": "Serialization",
+        "excerpt":"Problem:Develop a C# program to serialize/deserialize objects whose classes contain: a default constructor all data members are public and are one of the following primitive types:int (Int32), double (Double), or Boolean (Boolean).Serialization/Deserialization Example::point_right: more reference infoGoals:Not to seek help of any library serialization functions. Learn the inner-workingof serialization and deserialization...","categories": [],
+        "tags": ["C-sharp","Serialization"],
+        "url": "http://localhost:4000/Serialization/",
         "teaser":null}]

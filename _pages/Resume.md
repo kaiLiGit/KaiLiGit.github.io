@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: /resume/
-title: "Kai Li"
+title: "Resume/CV"
 author_profile: true
 header:
   image: "/images/califox.jpg"
@@ -17,7 +17,7 @@ header:
 # Overview
 Aspiring job seeker with passion in all things related to data in the fields
 of big data and data analytics. I had obtained fundamental computing skills
-through my degree in Computer Science, and am eager to put it in good use. I also
+through my degree in Computer Science, and am eager to put it in good use. I had also
 done various projects that can demonstrates my coding skill sets Java, Python, and C++.
 Most importantly, I am committed to my passion in information technology and maintained
 an inquisitive mind to learn new things.

@@ -4,7 +4,7 @@ date: 2016-11-20
 tags: [server socket, C++]
 header:
   image: "/images/projectImages/webServerClass.jpg"
-excerpt: "server socket, C++"
+excerpt: "server socket, C++, CSE278"
 # enabling math equations rendering in markdown
 mathjax: "true"
 ---

@@ -9,40 +9,40 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Image Search Program - Kai Li</title>
-<meta name="description" content="OpenMp, Image Processing, C++, High Performance Computing, CSE443">
+<!-- begin _includes/seo.html --><title>Interpreter Program - Kai Li</title>
+<meta name="description" content="Interpreter Implementation, Java, CSE465">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Kai Li">
-<meta property="og:title" content="Image Search Program">
-<meta property="og:url" content="http://localhost:4000/imageSearching/">
+<meta property="og:title" content="Interpreter Program">
+<meta property="og:url" content="http://localhost:4000/basicInterpreter/">
 
 
-  <meta property="og:description" content="OpenMp, Image Processing, C++, High Performance Computing, CSE443">
-
-
-
-  <meta property="og:image" content="http://localhost:4000/images/projectImages/imageSearch.jpg">
+  <meta property="og:description" content="Interpreter Implementation, Java, CSE465">
 
 
 
-
-
-  <meta property="article:published_time" content="2017-10-01T00:00:00-04:00">
+  <meta property="og:image" content="http://localhost:4000/images/projectImages/basicinterpreter.jpg">
 
 
 
 
 
-  
+  <meta property="article:published_time" content="2017-11-01T00:00:00-04:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/imageSearching/">
+
+<link rel="canonical" href="http://localhost:4000/basicInterpreter/">
 
 
 
@@ -167,7 +167,7 @@
 
 <div class="page__hero" style=" ">
   
-    <img src="http://localhost:4000/images/projectImages/imageSearch.jpg" alt="Image Search Program" class="page__hero-image">
+    <img src="http://localhost:4000/images/projectImages/basicinterpreter.jpg" alt="Interpreter Program" class="page__hero-image">
   
   
 </div>
@@ -299,15 +299,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Image Search Program">
-    <meta itemprop="description" content="OpenMp, Image Processing, C++, High Performance Computing, CSE443">
-    <meta itemprop="datePublished" content="October 01, 2017">
+    <meta itemprop="headline" content="Interpreter Program">
+    <meta itemprop="description" content="Interpreter Implementation, Java, CSE465">
+    <meta itemprop="datePublished" content="November 01, 2017">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Image Search Program
+          <h1 class="page__title" itemprop="headline">Interpreter Program
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -315,7 +315,7 @@
 
 
 
-  1 minute read
+  less than 1 minute read
 </p>
           
         </header>
@@ -324,61 +324,32 @@
       <section class="page__content" itemprop="text">
         
         <h2 id="problem">Problem:</h2>
-<p>Develop a simple image search program, i.e., simple algorithmic implmentation, moving
-the mask image row-by-row and column-by-column from left-to-right and top-to-bottom.
-Each matched image (.png format in [red, green, blue, alpha]) region in the larger
-image would be surrounded with a red box.
-<img src="http://localhost:4000/images/projectImages/imgSearchExample.png" alt="Image Search Example">
-<a href="https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/Homework7.pdf">Detailed Project/HW info</a></p>
-
-<h2 id="goal">Goal:</h2>
-<p>The emphasis lies in parallelism (OpenMP) that is to divide up this simple time-consuming algorithmic
-approach to a computing cluster (Red Hawk cluster, used at Miami University in my case) to
-speed up the image search processing.</p>
-
-<ul>
-  <li>
-<a href="https://www.openmp.org/">OpenMP</a>:
-    <blockquote>
-      <p>The OpenMP API supports multi-platform shared-memory parallel programming in C/C++.
-The OpenMP API defines a portable, scalable model with a simple and flexible interface
-for developing parallel applications on platforms from the desktop to the supercomputer.</p>
-    </blockquote>
-  </li>
-</ul>
-
-<h2 id="ideas">Ideas</h2>
-<p>The parallelizing strategy boils down to understanding how to allocate individual tasks (or the
-number of images / region matches) each thread has to do in the original pictures.</p>
-<ul>
-  <li>Two nested for-loops are used to iterate the original image and a region of the original image
-is “cropped” as large as mask image, and the cropped region is moved one pixel at a time row-by-row
-and column-by-column manner whenever the inner for-loop is executing, this we could visualized as one thread may be
-responsible one or more of these column iterations in the inner for-loop at a particular column.
-    <blockquote>
-      <p>Depending on the number of threads, each thread may be assigned to different number of rows of
-iterations moving the cropped images column by column in that row. In this case, OpenMP for
-directive will implicitly deal with the intricacies of allocating number of rows of pixels to the
-thread to move the cropped image column by column. OpenMP <code class="highlighter-rouge">for</code> directive will also take care of the
-index bounds accordingly while allocating the number of rows or columns to each thread.
-Since the cropped region and mask image are always the same or constant during the iterations of
-the beginning two nested for-loops when used to calculate background averages and same shade matching,
-we would just leave them as is. However, the matching pixel regions need to be stored in a list
-and such list is shared data among all the threads, therefore we would create critical sections for
-the list whenever it is being accessed or modified.</p>
-    </blockquote>
-  </li>
-</ul>
+<p>Given a <em>Z+-</em>, a made-up language, translate and execute a sequence of instructions
+written in such language using a high-level language. I picked Java in for this program. Here one example of <em>Z+-</em> program text file.
+<img src="http://localhost:4000/images/projectImages/zplusminusEx.png" alt="Image Search Example">
+<img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/Comparative-Language/tree/master/Homework_1">More <code class="highlighter-rouge">.zpm</code> input files listed in repo</a></p>
 
 <hr>
-<h2 id="implementation">Implementation</h2>
-<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/lik7_ImageSearch.cpp">ImageSearch.cpp solution</a></p>
 
-<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/Color.cpp">color.cpp</a></p>
+<h2 id="goal">Goal:</h2>
+<p>Translate and Execute <em>Z+-</em> using a high-level language.</p>
 
-<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/ImageProcess.cpp">ImageProcess.cpp</a></p>
+<hr>
 
-<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/lik7_HW7_Report.pdf">My Program Report after functional testing</a></p>
+<h2 id="ideas">Ideas:</h2>
+<ol>
+  <li>Read <em>Z+-</em> text files (.zpm) line by line.</li>
+  <li>Use a dictionary <code class="highlighter-rouge">&lt;String, int&gt;</code> to keep track of variables declaration and values.</li>
+  <li>Be aware to assumptions made towards variables type and values.</li>
+  <li>Throw exceptions or show messages when erroneous syntax encountered.</li>
+  <li>Recursively process <code class="highlighter-rouge">for-loop</code> statements.</li>
+  <li><a href="https://github.com/kaiLiGit/Comparative-Language/blob/master/Homework_1/README.md">More information on ideas</a></li>
+</ol>
+
+<hr>
+
+<h2 id="implementation">Implementation:</h2>
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/Comparative-Language/blob/master/Homework_1/MyProgram.java">See my implementation, Java</a></p>
 
         
       </section>
@@ -399,15 +370,11 @@ the list whenever it is being accessed or modified.</p>
     
       
       
-      <a href="http://localhost:4000/tags/#c" class="page__taxonomy-item" rel="tag">C++</a><span class="sep">, </span>
+      <a href="http://localhost:4000/tags/#interpreter-implementation" class="page__taxonomy-item" rel="tag">Interpreter Implementation</a><span class="sep">, </span>
     
       
       
-      <a href="http://localhost:4000/tags/#image-processing" class="page__taxonomy-item" rel="tag">Image Processing</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#openmp" class="page__taxonomy-item" rel="tag">OpenMp</a>
+      <a href="http://localhost:4000/tags/#java" class="page__taxonomy-item" rel="tag">Java</a>
     
     </span>
   </p>
@@ -416,7 +383,7 @@ the list whenever it is being accessed or modified.</p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-10-01T00:00:00-04:00">October 01, 2017</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-11-01T00:00:00-04:00">November 01, 2017</time></p>
         
       </footer>
 
@@ -425,24 +392,24 @@ the list whenever it is being accessed or modified.</p>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Image+Search+Program%20http%3A%2F%2Flocalhost%3A4000%2FimageSearching%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Interpreter+Program%20http%3A%2F%2Flocalhost%3A4000%2FbasicInterpreter%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FimageSearching%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FbasicInterpreter%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2FimageSearching%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2FbasicInterpreter%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2FimageSearching%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2FbasicInterpreter%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="http://localhost:4000/nearestStarbucks/" class="pagination--pager" title="Finding the Closest Starbucks
+      <a href="http://localhost:4000/imageSearching/" class="pagination--pager" title="Image Search Program
 ">Previous</a>
     
     
-      <a href="http://localhost:4000/basicInterpreter/" class="pagination--pager" title="Interpreter Program
+      <a href="http://localhost:4000/mailMergePro/" class="pagination--pager" title="Mail Merge Program
 ">Next</a>
     
   </nav>
@@ -521,7 +488,7 @@ the list whenever it is being accessed or modified.</p>
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="http://localhost:4000/basicInterpreter/" rel="permalink">Interpreter Program
+        <a href="http://localhost:4000/imageSearching/" rel="permalink">Image Search Program
 </a>
       
     </h2>
@@ -531,10 +498,10 @@ the list whenever it is being accessed or modified.</p>
 
 
 
-  less than 1 minute read
+  1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Interpreter Implementation, Java, CSE465
+    <p class="archive__item-excerpt" itemprop="description">OpenMp, Image Processing, C++, High Performance Computing, CSE443
 </p>
   </article>
 </div>

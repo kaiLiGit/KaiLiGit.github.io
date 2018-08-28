@@ -1,4 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-27T11:11:21-04:00</updated><id>http://localhost:4000/</id><title type="html">Kai Li</title><subtitle>Work Projects Portfolio</subtitle><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><entry><title type="html">Image Search Program</title><link href="http://localhost:4000/imageSearching/" rel="alternate" type="text/html" title="Image Search Program" /><published>2017-10-01T00:00:00-04:00</published><updated>2017-10-01T00:00:00-04:00</updated><id>http://localhost:4000/imageSearching</id><content type="html" xml:base="http://localhost:4000/imageSearching/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-28T11:02:54-04:00</updated><id>http://localhost:4000/</id><title type="html">Kai Li</title><subtitle>Work Projects Portfolio</subtitle><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><entry><title type="html">Serialization</title><link href="http://localhost:4000/Serialization/" rel="alternate" type="text/html" title="Serialization" /><published>2017-12-01T00:00:00-05:00</published><updated>2017-12-01T00:00:00-05:00</updated><id>http://localhost:4000/Serialization</id><content type="html" xml:base="http://localhost:4000/Serialization/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;p&gt;Develop a &lt;code class=&quot;highlighter-rouge&quot;&gt;C#&lt;/code&gt; program to serialize/deserialize objects whose classes contain:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a default constructor&lt;/li&gt;
+  &lt;li&gt;all data members are public and are one of the following primitive types:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; (Int32), &lt;code class=&quot;highlighter-rouge&quot;&gt;double&lt;/code&gt; (Double), or &lt;code class=&quot;highlighter-rouge&quot;&gt;Boolean&lt;/code&gt; (Boolean).
+Serialization/Deserialization Example:
+&lt;img src=&quot;http://localhost:4000/images/projectImages/serializeEx.png&quot; alt=&quot;serialize Example&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/Comparative-Language/blob/master/Homework%235/README.md&quot;&gt;more reference info&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;goals&quot;&gt;Goals:&lt;/h2&gt;
+&lt;p&gt;Not to seek help of any library serialization functions. Learn the inner-working
+of serialization and deserialization by using &lt;code class=&quot;highlighter-rouge&quot;&gt;C#&lt;/code&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;ideas&quot;&gt;Ideas:&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;For serialization:
+    &lt;ul&gt;
+      &lt;li&gt;know structural notion of the object type&lt;/li&gt;
+      &lt;li&gt;extract data type name and its value&lt;/li&gt;
+      &lt;li&gt;concatenate data type name and its corresponding value to each object of object(s).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;For deserialization:
+    &lt;ul&gt;
+      &lt;li&gt;know primitive data types entail in the object type, int, double, and boolean&lt;/li&gt;
+      &lt;li&gt;get the object type and create object if it is primitive (base case)&lt;/li&gt;
+      &lt;li&gt;create object from known type&lt;/li&gt;
+      &lt;li&gt;simple string manipulation to extract out open and end curly braces&lt;/li&gt;
+      &lt;li&gt;deserialize nested objects iteratively until the end curly brace&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;implementation&quot;&gt;Implementation:&lt;/h2&gt;
+
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/Comparative-Language/blob/master/Homework%235/MySerializer.cs&quot;&gt;MySerialize.cs code file&lt;/a&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="C-sharp" /><category term="Serialization" /><summary type="html">C#, Serialization, CSE465</summary></entry><entry><title type="html">Mail Merge Program</title><link href="http://localhost:4000/mailMergePro/" rel="alternate" type="text/html" title="Mail Merge Program" /><published>2017-11-01T00:00:00-04:00</published><updated>2017-11-01T00:00:00-04:00</updated><id>http://localhost:4000/mailMergePro</id><content type="html" xml:base="http://localhost:4000/mailMergePro/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;p&gt;Given some &lt;em&gt;.tsv&lt;/em&gt; files and &lt;em&gt;.tmp&lt;/em&gt;, where &lt;em&gt;.tsv&lt;/em&gt; file is tab-separated with values populated for each attribute and &lt;em&gt;.tmp&lt;/em&gt; is a form letter which has embedded code to be replaced by each corresponding value of the attribute for each mail recipient.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;a.tsv&lt;/strong&gt; instance:
+&lt;img src=&quot;http://localhost:4000/images/projectImages/tsvFile.png&quot; alt=&quot;tsv Example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;a.tmp&lt;/strong&gt; instance:
+&lt;img src=&quot;http://localhost:4000/images/projectImages/tmpFile.png&quot; alt=&quot;Image Search Example&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/kaiLiGit/Comparative-Language/tree/master/hw4_c%23_n_python&quot;&gt;More info on mail-merge program&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;goals&quot;&gt;Goals:&lt;/h2&gt;
+&lt;p&gt;The goal of this program is to compare the script language features between Python and C#. Regular expression, data structures (LIST and Dictionary), pass-by-reference, dynamic-type in Python, and auto-type in C# are features being explored in this program.
+___&lt;/p&gt;
+
+&lt;h2 id=&quot;ideas&quot;&gt;Ideas:&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Read both &lt;em&gt;.tsv&lt;/em&gt; and &lt;em&gt;.tmp&lt;/em&gt; files line by line.&lt;/li&gt;
+  &lt;li&gt;Loop through &lt;em&gt;.tsv&lt;/em&gt; files attributes into an array or a list.&lt;/li&gt;
+  &lt;li&gt;Figure out regular expression pattern in &lt;em&gt;.tmp&lt;/em&gt; file.&lt;/li&gt;
+  &lt;li&gt;Substitute each embedded code bracket, begins with &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt; and ends with &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;gt;&lt;/code&gt;, in &lt;em&gt;.tmp&lt;/em&gt; and write to a string.&lt;/li&gt;
+  &lt;li&gt;Write each substituted embedded code bracket to a new file.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;implementation&quot;&gt;Implementation:&lt;/h2&gt;
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/Comparative-Language/blob/master/hw4_c%23_n_python/hw4.py&quot;&gt;My Python code implementation&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/Comparative-Language/blob/master/hw4_c%23_n_python/hw4.py&quot;&gt;My C# code implementation&lt;/a&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="Python" /><category term="C-sharp" /><category term="script-language" /><category term="regular-expression" /><summary type="html">Python, C#, script-language, regular-expression, CSE465</summary></entry><entry><title type="html">Interpreter Program</title><link href="http://localhost:4000/basicInterpreter/" rel="alternate" type="text/html" title="Interpreter Program" /><published>2017-11-01T00:00:00-04:00</published><updated>2017-11-01T00:00:00-04:00</updated><id>http://localhost:4000/basicInterpreter</id><content type="html" xml:base="http://localhost:4000/basicInterpreter/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;p&gt;Given a &lt;em&gt;Z+-&lt;/em&gt;, a made-up language, translate and execute a sequence of instructions
+written in such language using a high-level language. I picked Java in for this program. Here one example of &lt;em&gt;Z+-&lt;/em&gt; program text file.
+&lt;img src=&quot;http://localhost:4000/images/projectImages/zplusminusEx.png&quot; alt=&quot;Image Search Example&quot; /&gt;
+:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/Comparative-Language/tree/master/Homework_1&quot;&gt;More &lt;code class=&quot;highlighter-rouge&quot;&gt;.zpm&lt;/code&gt; input files listed in repo&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;goal&quot;&gt;Goal:&lt;/h2&gt;
+&lt;p&gt;Translate and Execute &lt;em&gt;Z+-&lt;/em&gt; using a high-level language.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;ideas&quot;&gt;Ideas:&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Read &lt;em&gt;Z+-&lt;/em&gt; text files (.zpm) line by line.&lt;/li&gt;
+  &lt;li&gt;Use a dictionary &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;String, int&amp;gt;&lt;/code&gt; to keep track of variables declaration and values.&lt;/li&gt;
+  &lt;li&gt;Be aware to assumptions made towards variables type and values.&lt;/li&gt;
+  &lt;li&gt;Throw exceptions or show messages when erroneous syntax encountered.&lt;/li&gt;
+  &lt;li&gt;Recursively process &lt;code class=&quot;highlighter-rouge&quot;&gt;for-loop&lt;/code&gt; statements.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/kaiLiGit/Comparative-Language/blob/master/Homework_1/README.md&quot;&gt;More information on ideas&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;implementation&quot;&gt;Implementation:&lt;/h2&gt;
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/Comparative-Language/blob/master/Homework_1/MyProgram.java&quot;&gt;See my implementation, Java&lt;/a&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="Interpreter Implementation" /><category term="Java" /><summary type="html">Interpreter Implementation, Java, CSE465</summary></entry><entry><title type="html">Image Search Program</title><link href="http://localhost:4000/imageSearching/" rel="alternate" type="text/html" title="Image Search Program" /><published>2017-10-01T00:00:00-04:00</published><updated>2017-10-01T00:00:00-04:00</updated><id>http://localhost:4000/imageSearching</id><content type="html" xml:base="http://localhost:4000/imageSearching/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 &lt;p&gt;Develop a simple image search program, i.e., simple algorithmic implmentation, moving
 the mask image row-by-row and column-by-column from left-to-right and top-to-bottom.
 Each matched image (.png format in [red, green, blue, alpha]) region in the larger
@@ -52,7 +153,7 @@ the list whenever it is being accessed or modified.&lt;/p&gt;
 
 &lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/ImageProcess.cpp&quot;&gt;ImageProcess.cpp&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/lik7_HW7_Report.pdf&quot;&gt;My Program Report after functional testing&lt;/a&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="OpenMp" /><category term="Image Processing" /><category term="C++" /><summary type="html">OpenMp, Image Processing, C++</summary></entry><entry><title type="html">Finding the Closest Starbucks</title><link href="http://localhost:4000/nearestStarbucks/" rel="alternate" type="text/html" title="Finding the Closest Starbucks" /><published>2016-12-01T00:00:00-05:00</published><updated>2016-12-01T00:00:00-05:00</updated><id>http://localhost:4000/nearestStarbucks</id><content type="html" xml:base="http://localhost:4000/nearestStarbucks/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/High_Performance_Computing/blob/master/Homework%237/mysol/lik7_HW7_Report.pdf&quot;&gt;My Program Report after functional testing&lt;/a&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="OpenMp" /><category term="Image Processing" /><category term="C++" /><summary type="html">OpenMp, Image Processing, C++, High Performance Computing, CSE443</summary></entry><entry><title type="html">Finding the Closest Starbucks</title><link href="http://localhost:4000/nearestStarbucks/" rel="alternate" type="text/html" title="Finding the Closest Starbucks" /><published>2016-12-01T00:00:00-05:00</published><updated>2016-12-01T00:00:00-05:00</updated><id>http://localhost:4000/nearestStarbucks</id><content type="html" xml:base="http://localhost:4000/nearestStarbucks/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 &lt;p&gt;Given a list of geological points, or locations in longitude and latitude,
 find the nearest Starbucks locations to your current location.&lt;/p&gt;
 
@@ -87,7 +188,7 @@ find the nearest Starbucks locations to your current location.&lt;/p&gt;
 
 &lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE274Project/tree/master/ClosestStarbucks/src&quot;&gt;StudentStarbucks.java&lt;/a&gt; code in &lt;em&gt;Finding the Nearest Starbucks&lt;/em&gt; Project GitHub Repo.&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="nearest-neighbor" /><category term="k-d tree" /><category term="Java" /><summary type="html">nearest-neighbor, k-d tree, Java</summary></entry><entry><title type="html">Web Server Class</title><link href="http://localhost:4000/webServerClasses/" rel="alternate" type="text/html" title="Web Server Class" /><published>2016-11-20T00:00:00-05:00</published><updated>2016-11-20T00:00:00-05:00</updated><id>http://localhost:4000/webServerClasses</id><content type="html" xml:base="http://localhost:4000/webServerClasses/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+&lt;hr /&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="nearest-neighbor" /><category term="k-d tree" /><category term="Java" /><summary type="html">nearest-neighbor, k-d tree, Java, data-structure, CSE274</summary></entry><entry><title type="html">Web Server Class</title><link href="http://localhost:4000/webServerClasses/" rel="alternate" type="text/html" title="Web Server Class" /><published>2016-11-20T00:00:00-05:00</published><updated>2016-11-20T00:00:00-05:00</updated><id>http://localhost:4000/webServerClasses</id><content type="html" xml:base="http://localhost:4000/webServerClasses/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 &lt;p&gt;Implement a basic server class that can serve as a web-server that respond to a &lt;em&gt;GET&lt;/em&gt; request for a file path.&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -182,7 +283,7 @@ Content-Length: 47&lt;/p&gt;
 :point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE278Project/blob/master/Project4/Server.h&quot;&gt;Server.h&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Main.cpp for testing purpose:
-:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE278Project/blob/master/Project4/main.cpp&quot;&gt;main.cpp&lt;/a&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="server socket" /><category term="C++" /><summary type="html">server socket, C++</summary></entry><entry><title type="html">Tweets to HTML</title><link href="http://localhost:4000/tweet2html/" rel="alternate" type="text/html" title="Tweets to HTML" /><published>2016-11-01T00:00:00-04:00</published><updated>2016-11-01T00:00:00-04:00</updated><id>http://localhost:4000/tweet2html</id><content type="html" xml:base="http://localhost:4000/tweet2html/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
+:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE278Project/blob/master/Project4/main.cpp&quot;&gt;main.cpp&lt;/a&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="server socket" /><category term="C++" /><summary type="html">server socket, C++, CSE278</summary></entry><entry><title type="html">Tweets to HTML</title><link href="http://localhost:4000/tweet2html/" rel="alternate" type="text/html" title="Tweets to HTML" /><published>2016-11-01T00:00:00-04:00</published><updated>2016-11-01T00:00:00-04:00</updated><id>http://localhost:4000/tweet2html</id><content type="html" xml:base="http://localhost:4000/tweet2html/">&lt;h2 id=&quot;problem&quot;&gt;Problem:&lt;/h2&gt;
 &lt;p&gt;Given tweets in text, process the string of texts (words consists of characters)
 into HTML format.&lt;/p&gt;
 
@@ -244,4 +345,4 @@ into HTML format.&lt;/p&gt;
 
 &lt;p&gt;Header file omitted, and is essentially a simple derivation from the &lt;em&gt;.cpp&lt;/em&gt; methods’ signature.&lt;/p&gt;
 
-&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE278Project/blob/master/Project2/Tweet2Html.cpp&quot;&gt;Tweet2Html.cpp&lt;/a&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="string-processing" /><category term="C++" /><summary type="html">string-processing, C++</summary></entry></feed>
+&lt;p&gt;:point_right: &lt;a href=&quot;https://github.com/kaiLiGit/CSE278Project/blob/master/Project2/Tweet2Html.cpp&quot;&gt;Tweet2Html.cpp&lt;/a&gt;&lt;/p&gt;</content><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><category term="string-processing" /><category term="C++" /><summary type="html">string-processing, C++, CSE278</summary></entry></feed>

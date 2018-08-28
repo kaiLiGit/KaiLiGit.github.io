@@ -4,7 +4,7 @@ date: 2016-12-01
 tags: [nearest-neighbor, k-d tree, Java]
 header:
   image: "/images/projectImages/neareststarbucks2.jpg"
-excerpt: "nearest-neighbor, k-d tree, Java"
+excerpt: "nearest-neighbor, k-d tree, Java, data-structure, CSE274"
 # enabling math equations rendering in markdown
 mathjax: "true"
 ---
