@@ -1,10 +1,10 @@
 ---
-title: "Image Search Program"
+title: "Image Search & Parallization"
 date: 2017-10-01
-tags: [OpenMp, Image Processing, C++]
+tags: [OpenMp, Image Processing, Parallelization, C++]
 header:
   image: "/images/projectImages/imageSearch.jpg"
-excerpt: "OpenMp, Image Processing, C++, High Performance Computing, CSE443"
+excerpt: "OpenMp, Image Processing, C++, Parallelization, CSE443"
 # enabling math equations rendering in markdown
 mathjax: "true"
 ---

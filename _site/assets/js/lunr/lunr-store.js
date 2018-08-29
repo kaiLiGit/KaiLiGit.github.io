@@ -14,9 +14,9 @@ var store = [{
         "tags": ["nearest-neighbor","k-d tree","Java"],
         "url": "http://localhost:4000/nearestStarbucks/",
         "teaser":null},{
-        "title": "Image Search Program",
+        "title": "Image Search & Parallization",
         "excerpt":"Problem:Develop a simple image search program, i.e., simple algorithmic implmentation, movingthe mask image row-by-row and column-by-column from left-to-right and top-to-bottom.Each matched image (.png format in [red, green, blue, alpha]) region in the largerimage would be surrounded with a red box.Detailed Project/HW infoGoal:The emphasis lies in parallelism (OpenMP) that is to...","categories": [],
-        "tags": ["OpenMp","Image Processing","C++"],
+        "tags": ["OpenMp","Image Processing","Parallelization","C++"],
         "url": "http://localhost:4000/imageSearching/",
         "teaser":null},{
         "title": "Interpreter Program",
