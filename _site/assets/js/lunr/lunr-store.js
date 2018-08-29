@@ -33,4 +33,9 @@ var store = [{
         "excerpt":"Problem:Develop a C# program to serialize/deserialize objects whose classes contain: a default constructor all data members are public and are one of the following primitive types:int (Int32), double (Double), or Boolean (Boolean).Serialization/Deserialization Example::point_right: more reference infoGoals:Not to seek help of any library serialization functions. Learn the inner-workingof serialization and deserialization...","categories": [],
         "tags": ["C-sharp","Serialization"],
         "url": "http://localhost:4000/Serialization/",
+        "teaser":null},{
+        "title": "Big Ecological Data Archive Protocols",
+        "excerpt":"Project Description:This projet requires me working closely with Miami University’s Ecological Data Initiative (EDI) researcher, Beth dickmaem@miamioh.edu, to create a protocol or a documentation to utilize an R library package, EMLassemblyline to document the past 30 years worth of data collect from experiments done at Lakes Lacawac and Giles in...","categories": [],
+        "tags": ["EMLAssemblyline","csv-file-processing","R"],
+        "url": "http://localhost:4000/EDIProtocol/",
         "teaser":null}]

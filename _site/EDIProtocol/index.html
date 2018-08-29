@@ -9,40 +9,40 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Mail Merge Program - Kai Li</title>
-<meta name="description" content="Python, C#, script-language, regular-expression, CSE465">
+<!-- begin _includes/seo.html --><title>Big Ecological Data Archive Protocols - Kai Li</title>
+<meta name="description" content="EMLAssemblyline, Ecological Data Initiative Project, R">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Kai Li">
-<meta property="og:title" content="Mail Merge Program">
-<meta property="og:url" content="http://localhost:4000/mailMergePro/">
+<meta property="og:title" content="Big Ecological Data Archive Protocols">
+<meta property="og:url" content="http://localhost:4000/EDIProtocol/">
 
 
-  <meta property="og:description" content="Python, C#, script-language, regular-expression, CSE465">
-
-
-
-  <meta property="og:image" content="http://localhost:4000/images/projectImages/mailmerge.jpg">
+  <meta property="og:description" content="EMLAssemblyline, Ecological Data Initiative Project, R">
 
 
 
-
-
-  <meta property="article:published_time" content="2017-11-01T00:00:00-04:00">
+  <meta property="og:image" content="http://localhost:4000/images/projectImages/ediPorjec.jpg">
 
 
 
 
 
-  
+  <meta property="article:published_time" content="2018-02-01T00:00:00-05:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/mailMergePro/">
+
+<link rel="canonical" href="http://localhost:4000/EDIProtocol/">
 
 
 
@@ -167,7 +167,7 @@
 
 <div class="page__hero" style=" ">
   
-    <img src="http://localhost:4000/images/projectImages/mailmerge.jpg" alt="Mail Merge Program" class="page__hero-image">
+    <img src="http://localhost:4000/images/projectImages/ediPorjec.jpg" alt="Big Ecological Data Archive Protocols" class="page__hero-image">
   
   
 </div>
@@ -299,15 +299,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Mail Merge Program">
-    <meta itemprop="description" content="Python, C#, script-language, regular-expression, CSE465">
-    <meta itemprop="datePublished" content="November 01, 2017">
+    <meta itemprop="headline" content="Big Ecological Data Archive Protocols">
+    <meta itemprop="description" content="EMLAssemblyline, Ecological Data Initiative Project, R">
+    <meta itemprop="datePublished" content="February 01, 2018">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Mail Merge Program
+          <h1 class="page__title" itemprop="headline">Big Ecological Data Archive Protocols
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -315,7 +315,7 @@
 
 
 
-  less than 1 minute read
+  1 minute read
 </p>
           
         </header>
@@ -323,38 +323,41 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="problem">Problem:</h2>
-<p>Given some <em>.tsv</em> files and <em>.tmp</em>, where <em>.tsv</em> file is tab-separated with values populated for each attribute and <em>.tmp</em> is a form letter which has embedded code to be replaced by each corresponding value of the attribute for each mail recipient.</p>
-
-<p><strong>a.tsv</strong> instance:
-<img src="http://localhost:4000/images/projectImages/tsvFile.png" alt="tsv Example"></p>
-
-<p><strong>a.tmp</strong> instance:
-<img src="http://localhost:4000/images/projectImages/tmpFile.png" alt="Image Search Example"></p>
-
-<p><a href="https://github.com/kaiLiGit/Comparative-Language/tree/master/hw4_c%23_n_python">More info on mail-merge program</a></p>
-
-<hr>
-
-<h2 id="goals">Goals:</h2>
-<p>The goal of this program is to compare the script language features between Python and C#. Regular expression, data structures (LIST and Dictionary), pass-by-reference, dynamic-type in Python, and auto-type in C# are features being explored in this program.
-___</p>
-
-<h2 id="ideas">Ideas:</h2>
+        <h2 id="project-description">Project Description:</h2>
+<p>This projet requires me working closely with Miami University’s Ecological Data Initiative (EDI) researcher, Beth <a href="mailto:dickmaem@miamioh.edu">dickmaem@miamioh.edu</a>, to create a protocol or a documentation to utilize an R library package, <a href="https://github.com/EDIorg/EMLassemblyline/blob/master/documentation/instructions.md">EMLassemblyline</a> to document the past 30 years worth of data collect from experiments done at Lakes Lacawac and Giles in Pennsylvania, USA. My responsibilities were:</p>
 <ol>
-  <li>Read both <em>.tsv</em> and <em>.tmp</em> files line by line.</li>
-  <li>Loop through <em>.tsv</em> files attributes into an array or a list.</li>
-  <li>Figure out regular expression pattern in <em>.tmp</em> file.</li>
-  <li>Substitute each embedded code bracket, begins with <code class="highlighter-rouge">&lt;&lt;</code> and ends with <code class="highlighter-rouge">&gt;&gt;</code>, in <em>.tmp</em> and write to a string.</li>
-  <li>Write each substituted embedded code bracket to a new file.</li>
+  <li>cleaned data by removing unnecessary data, e.g., remove columns in CSV file that violates rules enforced by the EMLAssemblyline.</li>
+  <li>modified data format but not content to meet EMLAssemblyline formatting.</li>
+  <li>learned the EMLAssemblyline workflow and its implementation in R.</li>
+  <li>communicated with the EMLAssemblyline main contributor, <a href="https://github.com/clnsmth">Colin</a>, for obsure error encountered when attempting to generate EML files with our existing CSV files.</li>
+  <li>wrote a protocol documentation report for internal use within the Miami University’s EDI community.</li>
+  <li>successfully published and contributed our EDI <a href="https://portal.edirepository.org/nis/mapbrowse?scope=edi&amp;identifier=186">research data</a> to the EDI portal.</li>
 </ol>
 
-<hr>
+<h2 id="goals">Goals:</h2>
+<ol>
+  <li>write an EDI archive protocol report for other researchers within the Miami University’s EDI community to use.</li>
+  <li>publish Miami University’s EDI data collected from their Lake Lacawac &amp; Giles experiments in the past 30 years.</li>
+  <li>set up a weekly lab meeting with EDI student members and researchers to discuss my work in the past week.</li>
+  <li>communicate with my supervisor Beth <a href="mailto:dickmaem@miamioh.edu">dickmaem@miamioh.edu</a> to report my work progress</li>
+  <li>walk through the protocol report and Lake Lacawac &amp; Giles EML file with Beth such that she understands the EML workflow which helps her with moving forward with her research.</li>
+</ol>
 
-<h2 id="implementation">Implementation:</h2>
-<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/Comparative-Language/blob/master/hw4_c%23_n_python/hw4.py">My Python code implementation</a></p>
+<p>Ultimately, my job is to make publishing data to <a href="https://portal.edirepository.org/">EDI</a> easy for researchers at Miami University’s EDI and helps them contribute to the portal with ease.</p>
 
-<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/Comparative-Language/blob/master/hw4_c%23_n_python/hw4.py">My C# code implementation</a></p>
+<h2 id="implementation--documentation">Implementation &amp; documentation:</h2>
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/EDIorg/EMLassemblyline/blob/master/documentation/instructions.md">EMLAssemblyLine Tutorial</a></p>
+
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://portal.edirepository.org/nis/mapbrowse?scope=edi&amp;identifier=186">Our Published data from Lake Lacawac</a></p>
+
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/EDI_Work_Repo/blob/master/lacwac_gile_real_data.R">Simple EML code file</a></p>
+
+<h2 id="links">Links:</h2>
+<p><strong>Screenshot of Project Highlight in the Miami University’s EDI site:</strong>
+<img src="http://localhost:4000/images/projectImages/ecologicalExcerpt.png" alt="Work Project File"></p>
+
+<p><strong>Project Highlight Link:</strong>
+<a href="http://miamioh.edu/cas/academics/centers/miebdi/opportunities/index.html">Big Ecological Data Archive Protocol</a></p>
 
         
       </section>
@@ -375,19 +378,15 @@ ___</p>
     
       
       
-      <a href="http://localhost:4000/tags/#c-sharp" class="page__taxonomy-item" rel="tag">C-sharp</a><span class="sep">, </span>
+      <a href="http://localhost:4000/tags/#csv-file-processing" class="page__taxonomy-item" rel="tag">csv-file-processing</a><span class="sep">, </span>
     
       
       
-      <a href="http://localhost:4000/tags/#python" class="page__taxonomy-item" rel="tag">Python</a><span class="sep">, </span>
+      <a href="http://localhost:4000/tags/#emlassemblyline" class="page__taxonomy-item" rel="tag">EMLAssemblyline</a><span class="sep">, </span>
     
       
       
-      <a href="http://localhost:4000/tags/#regular-expression" class="page__taxonomy-item" rel="tag">regular-expression</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#script-language" class="page__taxonomy-item" rel="tag">script-language</a>
+      <a href="http://localhost:4000/tags/#r" class="page__taxonomy-item" rel="tag">R</a>
     
     </span>
   </p>
@@ -396,7 +395,7 @@ ___</p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-11-01T00:00:00-04:00">November 01, 2017</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-02-01T00:00:00-05:00">February 01, 2018</time></p>
         
       </footer>
 
@@ -405,25 +404,24 @@ ___</p>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Mail+Merge+Program%20http%3A%2F%2Flocalhost%3A4000%2FmailMergePro%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Big+Ecological+Data+Archive+Protocols%20http%3A%2F%2Flocalhost%3A4000%2FEDIProtocol%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FmailMergePro%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FEDIProtocol%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2FmailMergePro%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2FEDIProtocol%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2FmailMergePro%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2FEDIProtocol%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="http://localhost:4000/basicInterpreter/" class="pagination--pager" title="Interpreter Program
+      <a href="http://localhost:4000/Serialization/" class="pagination--pager" title="Serialization
 ">Previous</a>
     
     
-      <a href="http://localhost:4000/Serialization/" class="pagination--pager" title="Serialization
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -437,33 +435,6 @@ ___</p>
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/EDIProtocol/" rel="permalink">Big Ecological Data Archive Protocols
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">EMLAssemblyline, Ecological Data Initiative Project, R
-</p>
-  </article>
-</div>
         
           
 
@@ -488,6 +459,33 @@ ___</p>
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">C#, Serialization, CSE465
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/mailMergePro/" rel="permalink">Mail Merge Program
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Python, C#, script-language, regular-expression, CSE465
 </p>
   </article>
 </div>
