@@ -19,10 +19,10 @@ This projet requires me working closely with Miami University's Ecological Data 
 6. successfully published and contributed our EDI [research data](https://portal.edirepository.org/nis/mapbrowse?scope=edi&identifier=186) to the EDI portal.
 
 ## Goals:
-1. write an EDI archive protocol report for other researchers within the Miami University's EDI community to use.
+1. write an EDI archive protocol report for other researchers within the Miami University's EDI community to follow.
 2. publish Miami University's EDI data collected from their Lake Lacawac & Giles experiments in the past 30 years.
-3. set up a weekly lab meeting with EDI student members and researchers to discuss my work in the past week.
-4. communicate with my supervisor Beth <dickmaem@miamioh.edu> to report my work progress
+3. schedule a weekly lab meeting with EDI student members and researchers to discuss my work in the past week.
+4. communicate with my supervisor Beth <dickmaem@miamioh.edu> to report my work progress.
 5. walk through the protocol report and Lake Lacawac & Giles EML file with Beth such that she understands the EML workflow which helps her with moving forward with her research.
 
 Ultimately, my job is to make publishing data to [EDI](https://portal.edirepository.org/) easy for researchers at Miami University's EDI and helps them contribute to the portal with ease.  
@@ -36,7 +36,7 @@ Ultimately, my job is to make publishing data to [EDI](https://portal.edireposit
 
 
 ## Links:
-**Screenshot of Project Highlight in the Miami University's EDI site:**
+**Screenshot of Project Highlight from the Miami University's EDI site:**
 ![Work Project File]({{ "/images/projectImages/ecologicalExcerpt.png" | absolute_url }})
 
 **Project Highlight Link:**
