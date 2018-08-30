@@ -3,7 +3,7 @@ title: "Big Ecological Data Archive Protocols"
 date: 2018-2-01
 tags: [EMLAssemblyline, csv-file-processing, R]
 header:
-  image: "/images/projectImages/ediPorjec.jpg"
+  image: "/images/projectImages/ediProject.jpg"
 excerpt: "EMLAssemblyline, Ecological Data Initiative Project, R"
 # enabling math equations rendering in markdown
 # mathjax: "true"

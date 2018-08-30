@@ -29,13 +29,23 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 2nd Best Senior Design Award, Computer Science division (2018)
 
 # Education
-**Miami University**&nbsp;&nbsp;&nbsp; Oxford, Ohio, :mortar_board: May 2018, Cum Laude
+![MUpic]({{ "/images/MUCSE.jpg" | absolute_url }} "MU logo")
+
+
+ **Miami University**&nbsp;&nbsp;&nbsp; Oxford, Ohio, :mortar_board: May 2018, Cum Laude
 
 :black_circle:&nbsp;&nbsp;B.S. in Computer Science, Overall GPA: 3.60, Major GPA: 3.80
 
+
+![PBApic]({{ "/images/PBA.jpg" | absolute_url }} "PBA logo")
+
+
 **Palm Beach Atlantic University** FL, December, 2015
 
-:black_circle:&nbsp;&nbsp; Management, _tranferred out_
+:black_circle:&nbsp;&nbsp; Management, _**tranferred out**_
+
+![lwcpic]({{"/images/lwc.jpg" | absolute_url }} "LWC logo")
+
 
 **Lake Worth Christian School**&nbsp;&nbsp;&nbsp; Lake Worth, FL, May 2013
 
