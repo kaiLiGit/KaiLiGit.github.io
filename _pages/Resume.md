@@ -47,7 +47,7 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 ![lwcpic]({{"/images/lwc.jpg" | absolute_url }} "LWC logo")
 
 
-**Lake Worth Christian School**&nbsp;&nbsp;&nbsp; Lake Worth, FL, May 2013
+*High School*: **Lake Worth Christian School**&nbsp;&nbsp;&nbsp; Lake Worth, FL, May 2013
 
 # Work Experience
 
