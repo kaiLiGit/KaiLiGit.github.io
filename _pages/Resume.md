@@ -36,6 +36,7 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 
 :black_circle:&nbsp;&nbsp;B.S. in Computer Science, Overall GPA: 3.60, Major GPA: 3.80
 
+---
 
 ![PBApic]({{ "/images/PBA.jpg" | absolute_url }} "PBA logo")
 
@@ -44,10 +45,14 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 
 :black_circle:&nbsp;&nbsp; Management, _**tranferred out**_
 
+---
+
 ![lwcpic]({{"/images/lwc.jpg" | absolute_url }} "LWC logo")
 
 
 *High School*: **Lake Worth Christian School**&nbsp;&nbsp;&nbsp; Lake Worth, FL, May 2013
+
+---
 
 # Work Experience
 
