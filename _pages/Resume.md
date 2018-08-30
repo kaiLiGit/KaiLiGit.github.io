@@ -15,6 +15,9 @@ header:
 <!-- :point_right:[View/Download Printable Résumé](https://docs.google.com/document/d/1x6mZDFOiuFDyPzFvxwrVlpnqEfS1_xxGiucMSlo1ER8/edit?usp=sharing) -->
 
 # Overview
+
+---
+
 Aspiring job seeker with passion in all things related to data in the fields
 of big data and data analytics. I had obtained fundamental computing skills
 through my degree in Computer Science, and am eager to put it in good use. I had also
@@ -23,12 +26,18 @@ Most importantly, I am committed to my passion in information technology and mai
 an inquisitive mind to learn new things.
 
 # Awards
+
+---
+
 High School Honor List mentioned (Lake Worth Christian School, 2012) :black_circle:
 The Society for Collegiate Leadership & Achievement Award :black_circle:
 Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_circle:
 2nd Best Senior Design Award, Computer Science division (2018)
 
 # Education
+
+---
+
 ![MUpic]({{ "/images/MUCSE.jpg" | absolute_url }} "MU logo")
 
 
@@ -53,8 +62,10 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 *High School*: **Lake Worth Christian School**&nbsp;&nbsp;&nbsp; Lake Worth, FL, May 2013
 
 ---
-
+---
 # Work Experience
+
+---
 
 **Ecological Big Data Intern**
 
@@ -66,6 +77,8 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:small_orange_diamond: Formulated and documented a detailed protocol to enable other researchers within the university to easily archive their data in EDI's repository (Beth, <dickmaem@miamioh.edu>, is my supervisor, in case you have further questions).  
 
+---
+
 **Teaching Assistant**, Object-Oriented Programming, Java
 
 :large_orange_diamond: Computer Science Department, Miami university, Jan 2017 - Feb 2017.
@@ -75,6 +88,8 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:small_orange_diamond: Held help session to assist students with projects and assignments
 
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:small_orange_diamond: Evaluated student's in-class projects and assignment
+
+---
 
 **English as a Second Language Instructor**
 
@@ -86,7 +101,11 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 
  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:small_orange_diamond: Held various speaking sessions incorporating in-class games and fun activities.
 
+---
+
 # Skills
+
+---
 
 **Language:**
 
@@ -108,6 +127,9 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; Teaching, Public Speaking, Team Collaboration.
 
 # Activities & Organization
+
+---
+
 **Center For Analytics & Data Science**, Miami University
 
 :large_blue_diamond: Member & Student Employee, 2017 - 2018
@@ -115,6 +137,8 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; :small_blue_diamond: Attended weekly member meetings and contribute ideas of organizational events relating to various assigned projects.
 
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; :small_blue_diamond: Participated in occasional seminar about topics in software agile development being used in various business projects development.
+
+---
 
 **The Society for Collgiate Leadership & Achievement**
 
@@ -124,6 +148,7 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; :small_blue_diamond: Participated online forum to share personal job hunt experience
 
+---
 
 **Palm Beach Atlantic Investment Club**, Palm Beach Atlantic University
 
@@ -133,7 +158,10 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; :small_blue_diamond: Researched and observed ongoing tech stock trends and shared personal insight in weekly meetings
 
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; :small_blue_diamond: Pitched promising tech stocks to student panelists and investors using virtual money bills
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; :small_blue_diamond: Pitched promising tech stocks to student panelists and investors using
+virtual money bills
+
+---
 
 <!--Back to the top button HTML begins -->
 <!-- <a href="#page-title" class="back-to-top" onclick= "topFunction()">Back to The Top &uarr;</a>:rocket: -->
