@@ -8,9 +8,9 @@ header:
 ---
 :city_sunrise: **Location**: &nbsp; Shenzhen
 
-:point_right: <a href="https://docs.google.com/document/d/1x6mZDFOiuFDyPzFvxwrVlpnqEfS1_xxGiucMSlo1ER8/edit?usp=sharing" target="_blank"> Download/View Printable Résumé, English </a>
+:point_right: <a href="https://share.weiyun.com/5F2CPTs" target="_blank"> Download/View Printable Résumé, English </a>
 
-:point_right: <a href="https://docs.google.com/document/d/1x6mZDFOiuFDyPzFvxwrVlpnqEfS1_xxGiucMSlo1ER8/edit?usp=sharing" target="_blank"> 下载或查看简历, 中文 </a>
+:point_right: <a href="https://share.weiyun.com/5G6DCwD" target="_blank"> 下载或查看简历, 中文 </a>
 
 <!-- :point_right:[View/Download Printable Résumé](https://docs.google.com/document/d/1x6mZDFOiuFDyPzFvxwrVlpnqEfS1_xxGiucMSlo1ER8/edit?usp=sharing) -->
 
@@ -43,7 +43,7 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 
  **Miami University**&nbsp;&nbsp;&nbsp; Oxford, Ohio, :mortar_board: May 2018, Cum Laude
 
-:black_circle:&nbsp;&nbsp;B.S. in Computer Science, Overall GPA: 3.60, Major GPA: 3.80
+:black_circle:&nbsp;&nbsp;B.S. in Computer Science, Overall GPA: 3.60/4.0, Major GPA: 3.80/4.0
 
 ---
 
@@ -70,9 +70,9 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 
 :large_orange_diamond: Big Ecological Data Archive Protocol, Center for Analytics and Data Science, Miami University, Jan 2018 - May 2018.
 
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:small_orange_diamond: worked with [Miami University's Ecological Big Data Initiative](https://miamioh.edu/cas/academics/centers/miebdi/opportunities/index.html) archiving three decades of data collected from a multitudes of lakes around the world.
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:small_orange_diamond: worked with <a href="https://miamioh.edu/cas/academics/centers/miebdi/opportunities/index.html" target="_blank"> Miami University's Ecological Big Data Initiative</a> (under Big Ecological Data Archive Protocols) archiving three decades of data collected from a multitudes of lakes around the world.
 
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:small_orange_diamond: Compiled and formated accociated metadata and data for the Ecological Data initiative (EDI) archives (using EMLassemblyline, an R package library); see our [archive data](https://portal.edirepository.org/nis/mapbrowse?scope=edi&identifier=186) stored in the EDI's portal.
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:small_orange_diamond: Compiled and formated accociated metadata and data for the Ecological Data initiative (EDI) archives (using EMLassemblyline, an R package library); see our <a href="https://portal.edirepository.org/nis/mapbrowse?scope=edi&identifier=186" target="_blank"> archive data</a> stored in the EDI's portal.
 
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:small_orange_diamond: Formulated and documented a detailed protocol to enable other researchers within the university to easily archive their data in EDI's repository (Beth, <dickmaem@miamioh.edu>, is my supervisor, in case you have further questions).  
 
@@ -80,7 +80,7 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 
 **Teaching Assistant**, Object-Oriented Programming, Java
 
-:large_orange_diamond: Computer Science Department, Miami university, Jan 2017 - Feb 2017.
+:large_orange_diamond: Computer Science Department, Miami university, Jan 2016 - Feb 2017.
 
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:small_orange_diamond: Assisted course instructor in lab session to answer student's questions
 
@@ -108,7 +108,7 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; *Proficient:* Java
 
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; *Comfortable:* Python, C++, C, HTML, CSS, Javascript
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; *Comfortable:* Python, C++, C, HTML, CSS, Javascript, R, SQL
 
 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; *Basic:* Scheme, Answer Set Prolog
 
