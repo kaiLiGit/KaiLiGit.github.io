@@ -6,7 +6,7 @@ header:
   image: "/images/projectImages/webServerClass.jpg"
 excerpt: "server socket, C++, CSE278"
 # enabling math equations rendering in markdown
-mathjax: "true"
+# mathjax: "true"
 ---
 ## Problem:
 Implement a basic server class that can serve as a web-server that respond to a *GET* request for a file path.

@@ -6,7 +6,7 @@ header:
   image: "/images/projectImages/Serialization.jpg"
 excerpt: "C#, Serialization, CSE465"
 # enabling math equations rendering in markdown
-mathjax: "true"
+# mathjax: "true"
 ---
 ## Problem:
 Develop a `C#` program to serialize/deserialize objects whose classes contain:

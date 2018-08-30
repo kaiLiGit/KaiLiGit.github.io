@@ -6,7 +6,7 @@ header:
   image: "/images/projectImages/imageSearch.jpg"
 excerpt: "OpenMp, Image Processing, C++, Parallelization, CSE443"
 # enabling math equations rendering in markdown
-mathjax: "true"
+# mathjax: "true"
 ---
 
 ## Problem:

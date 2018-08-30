@@ -6,7 +6,7 @@ header:
   image: "/images/projectImages/ediPorjec.jpg"
 excerpt: "EMLAssemblyline, Ecological Data Initiative Project, R"
 # enabling math equations rendering in markdown
-mathjax: "true"
+# mathjax: "true"
 ---
 
 ## Project Description:

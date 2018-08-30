@@ -6,7 +6,7 @@ header:
   image: "/images/projectImages/basicinterpreter.jpg"
 excerpt: "Interpreter Implementation, Java, CSE465"
 # enabling math equations rendering in markdown
-mathjax: "true"
+# mathjax: "true"
 ---
 
 ## Problem:

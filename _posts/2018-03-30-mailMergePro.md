@@ -6,7 +6,7 @@ header:
   image: "/images/projectImages/mailmerge.jpg"
 excerpt: "Python, C#, script-language, regular-expression, CSE465"
 # enabling math equations rendering in markdown
-mathjax: "true"
+# mathjax: "true"
 ---
 ## Problem:
 Given some *.tsv* files and *.tmp*, where *.tsv* file is tab-separated with values populated for each attribute and *.tmp* is a form letter which has embedded code to be replaced by each corresponding value of the attribute for each mail recipient.

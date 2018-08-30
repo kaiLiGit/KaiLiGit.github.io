@@ -6,7 +6,7 @@ header:
   image: "/images/projectImages/neareststarbucks2.jpg"
 excerpt: "nearest-neighbor, k-d tree, Java, data-structure, CSE274"
 # enabling math equations rendering in markdown
-mathjax: "true"
+# mathjax: "true"
 ---
 ## Problem:
 Given a list of geological points, or locations in longitude and latitude,
