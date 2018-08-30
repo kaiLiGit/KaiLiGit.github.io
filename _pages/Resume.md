@@ -62,7 +62,7 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
 *High School*: **Lake Worth Christian School**&nbsp;&nbsp;&nbsp; Lake Worth, FL, May 2013
 
 ---
----
+
 # Work Experience
 
 ---
@@ -100,8 +100,6 @@ Dean's List (GPA 3.70 or above, four consecutive semesters 2016 - 2018) :black_c
  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:small_orange_diamond: Wrote and designed English class materials used in business setting.
 
  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;:small_orange_diamond: Held various speaking sessions incorporating in-class games and fun activities.
-
----
 
 # Skills
 
