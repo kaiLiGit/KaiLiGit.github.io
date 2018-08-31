@@ -38,4 +38,9 @@ var store = [{
         "excerpt":"Project Description:This projet requires me working closely with Miami University’s Ecological Data Initiative (EDI) researcher, Beth dickmaem@miamioh.edu, to create a protocol or a documentation to utilize an R library package, EMLassemblyline to document the past 30 years worth of data collect from experiments done at Lakes Lacawac and Giles in...","categories": [],
         "tags": ["EMLAssemblyline","csv-file-processing","R"],
         "url": "http://localhost:4000/EDIProtocol/",
+        "teaser":null},{
+        "title": "NP-Complete: The Set Packing Problem",
+        "excerpt":"ProblemThis project requires writing a research paper for Advanced Algorithm offered at Miami University, Spring, 2018. The project requested to discuss narrowly over one specific NP-Complete problem, whichthe Set Packing Problem (SPP) is selected for this project. Specifically, its problem description,its variants, it applications, and the derivation proof of NP-completeness...","categories": [],
+        "tags": ["NP-Completeness","Algorithm"],
+        "url": "http://localhost:4000/npSPP/",
         "teaser":null}]

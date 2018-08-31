@@ -9,40 +9,40 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Tweets to HTML - Kai Li</title>
-<meta name="description" content="string-processing, C++, CSE278">
+<!-- begin _includes/seo.html --><title>NP-Complete: The Set Packing Problem - Kai Li</title>
+<meta name="description" content="NP-Completeness, Algorithm">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Kai Li">
-<meta property="og:title" content="Tweets to HTML">
-<meta property="og:url" content="http://localhost:4000/tweet2html/">
+<meta property="og:title" content="NP-Complete: The Set Packing Problem">
+<meta property="og:url" content="http://localhost:4000/npSPP/">
 
 
-  <meta property="og:description" content="string-processing, C++, CSE278">
-
-
-
-  <meta property="og:image" content="http://localhost:4000/images/projectImages/tweet2html.jpg">
+  <meta property="og:description" content="NP-Completeness, Algorithm">
 
 
 
-
-
-  <meta property="article:published_time" content="2016-11-01T00:00:00-04:00">
+  <meta property="og:image" content="http://localhost:4000/images/projectImages/NP_complete_TheSPP.jpg">
 
 
 
 
 
-  
+  <meta property="article:published_time" content="2018-03-01T00:00:00-05:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/tweet2html/">
+
+<link rel="canonical" href="http://localhost:4000/npSPP/">
 
 
 
@@ -169,7 +169,7 @@
 
 <div class="page__hero" style=" ">
   
-    <img src="http://localhost:4000/images/projectImages/tweet2html.jpg" alt="Tweets to HTML" class="page__hero-image">
+    <img src="http://localhost:4000/images/projectImages/NP_complete_TheSPP.jpg" alt="NP-Complete: The Set Packing Problem" class="page__hero-image">
   
   
 </div>
@@ -301,15 +301,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Tweets to HTML">
-    <meta itemprop="description" content="string-processing, C++, CSE278">
-    <meta itemprop="datePublished" content="November 01, 2016">
+    <meta itemprop="headline" content="NP-Complete: The Set Packing Problem">
+    <meta itemprop="description" content="NP-Completeness, Algorithm">
+    <meta itemprop="datePublished" content="March 01, 2018">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Tweets to HTML
+          <h1 class="page__title" itemprop="headline">NP-Complete: The Set Packing Problem
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -317,7 +317,7 @@
 
 
 
-  1 minute read
+  less than 1 minute read
 </p>
           
         </header>
@@ -325,83 +325,21 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="problem">Problem:</h2>
-<p>Given tweets in text, process the string of texts (words consists of characters)
-into HTML format.</p>
+        <h2 id="problem">Problem</h2>
+<p>This project requires writing a research paper for Advanced Algorithm offered at Miami University, Spring, 2018. The project requested to discuss narrowly over one specific NP-Complete problem, which
+<em>the Set Packing Problem</em> (SPP) is selected for this project. Specifically, its problem description,
+its variants, it applications, and the derivation proof of NP-completeness procedure were
+used to broadly discuss about SPP.</p>
 
-<h2 id="goal">Goal:</h2>
-<p>Same as the problem requested, converts specific elements on a standard tweet into HTML format.</p>
-
-<h2 id="ideas">Ideas:</h2>
-<p>There needs to be some pre-defined formats such that we could follow in our implementation of the tweet to html.</p>
+<h2 id="goal">Goal</h2>
 <ol>
-  <li>Each tweet should be wrapped around by HTML div tag (with CSS class tweet)
-    <ul>
-      <li>Texts should be placed in between <code class="highlighter-rouge">&lt;div class="tweet"&gt;</code> and <code class="highlighter-rouge">&lt;/div&gt;</code>.</li>
-    </ul>
-  </li>
-  <li>Convert tweet handle of the form <code class="highlighter-rouge">@xyz</code> to HTML anchors of the form:
-    <ul>
-      <li><code class="highlighter-rouge">&lt;a href="https://www.twitter.com/xyz"&gt;@xyz&lt;/a&gt;</code></li>
-      <li>Another example: <em>@miamiuniversity</em> to <code class="highlighter-rouge">&lt;a href="https://www.twitter.com/miamiuniversity"&gt;@miamiuniversity&lt;/a&gt;</code>
-</li>
-    </ul>
-  </li>
-  <li>Convert <code class="highlighter-rouge">#abc</code> to html anchor of the form:
-    <ul>
-      <li>
-<code class="highlighter-rouge">&lt;a href="https://www.twitter.com/hashtag/abc"&gt;#abc&lt;/a&gt;</code>.</li>
-      <li>Another example: <code class="highlighter-rouge">#LoveAndHonor</code> to <code class="highlighter-rouge">&lt;a href="https://www.twitter.com/hashtag/LoveAndHonor"&gt;#LoveAndHonor&lt;/a&gt;</code>
-</li>
-    </ul>
-  </li>
-  <li>Convert emoticons to html image tags:
-    <ul>
-      <li>
-<code class="highlighter-rouge">:-)</code> to <code class="highlighter-rouge">&lt;img src="http://ceclnx01.cec.miamioh.edu/~raodm/hw3/smile.png"&gt;</code>
-</li>
-      <li>
-<code class="highlighter-rouge">:-(</code> to <code class="highlighter-rouge">&lt;img src="http://ceclnx01.cec.miamioh.edu/~raodm/hw3/frown.png"&gt;</code>
-</li>
-      <li>
-<code class="highlighter-rouge">:-|</code> to <code class="highlighter-rouge">&lt;img src="http://ceclnx01.cec.miamioh.edu/~raodm/hw3/normal.png"&gt;</code>
-</li>
-      <li>
-<code class="highlighter-rouge">:++</code> to <code class="highlighter-rouge">&lt;img src="http://ceclnx01.cec.miamioh.edu/~raodm/hw3/cpp.png"&gt;</code>
-</li>
-    </ul>
-  </li>
-  <li>Functional testings (done using Linux command lines)
-    <ul>
-      <li><code class="highlighter-rouge">$ ./tweet2html base_inputs.txt base_output.html</code></li>
-      <li><code class="highlighter-rouge">$ diff base_output.html expected_base_output.html</code></li>
-    </ul>
-    <ul>
-      <li>
-<code class="highlighter-rouge">tweet2html</code>, the executable of this project</li>
-      <li>
-<code class="highlighter-rouge">base_inputs.txt</code>, input file; <code class="highlighter-rouge">base_output.html</code>, output file</li>
-      <li>
-<code class="highlighter-rouge">diff</code> command for testing the outcome of the program against the expected output</li>
-    </ul>
-  </li>
+  <li>select one <em>NP-complete problem</em> to understand both the problem and its <em>NP-completeness</em>.</li>
+  <li>discover its applications to relates mathematical concepts to application.</li>
+  <li>learn to prove <em>NP-completeness</em>: first prove its existence in NP, then find existed <em>NP-complete problem</em> and translate/reduce it to the problem attempting to prove.</li>
 </ol>
 
-<ul>
-  <li>One more testing example:
-    <ul>
-      <li><code class="highlighter-rouge">$ ./tweet2html tweet_inputs.txt tweet_output.html</code></li>
-      <li><code class="highlighter-rouge">$ diff twee_output.html expected_tweet_output.html</code></li>
-    </ul>
-  </li>
-</ul>
-
-<hr>
-<h2 id="implementation">Implementation</h2>
-
-<p>Header file omitted, and is essentially a simple derivation from the <em>.cpp</em> methods’ signature.</p>
-
-<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/CSE278Project/blob/master/Project2/Tweet2Html.cpp">Tweet2Html.cpp</a></p>
+<h2 id="completed-paper">Completed Paper:</h2>
+<p><img class="emoji" title=":point_right:" alt=":point_right:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f449.png" height="20" width="20"> <a href="https://github.com/kaiLiGit/Advanced_Algorithm/blob/master/CSE664Paper1.pdf" target="_blank">An Inquiry of The Set Packing Problem</a></p>
 
         
       </section>
@@ -422,11 +360,11 @@ into HTML format.</p>
     
       
       
-      <a href="http://localhost:4000/tags/#c" class="page__taxonomy-item" rel="tag">C++</a><span class="sep">, </span>
+      <a href="http://localhost:4000/tags/#algorithm" class="page__taxonomy-item" rel="tag">Algorithm</a><span class="sep">, </span>
     
       
       
-      <a href="http://localhost:4000/tags/#string-processing" class="page__taxonomy-item" rel="tag">string-processing</a>
+      <a href="http://localhost:4000/tags/#np-completeness" class="page__taxonomy-item" rel="tag">NP-Completeness</a>
     
     </span>
   </p>
@@ -435,7 +373,7 @@ into HTML format.</p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-11-01T00:00:00-04:00">November 01, 2016</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-03-01T00:00:00-05:00">March 01, 2018</time></p>
         
       </footer>
 
@@ -444,24 +382,24 @@ into HTML format.</p>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Tweets+to+HTML%20http%3A%2F%2Flocalhost%3A4000%2Ftweet2html%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=NP-Complete%3A+The+Set+Packing+Problem%20http%3A%2F%2Flocalhost%3A4000%2FnpSPP%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftweet2html%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FnpSPP%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Ftweet2html%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2FnpSPP%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2Ftweet2html%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2FnpSPP%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">Previous</a>
+      <a href="http://localhost:4000/EDIProtocol/" class="pagination--pager" title="Big Ecological Data Archive Protocols
+">Previous</a>
     
     
-      <a href="http://localhost:4000/webServerClasses/" class="pagination--pager" title="Web Server Class
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -475,33 +413,6 @@ into HTML format.</p>
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="http://localhost:4000/npSPP/" rel="permalink">NP-Complete: The Set Packing Problem
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">NP-Completeness, Algorithm
-</p>
-  </article>
-</div>
         
           
 
@@ -580,6 +491,33 @@ into HTML format.</p>
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">Python, C#, script-language, regular-expression, CSE465
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/basicInterpreter/" rel="permalink">Interpreter Program
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Interpreter Implementation, Java, CSE465
 </p>
   </article>
 </div>
