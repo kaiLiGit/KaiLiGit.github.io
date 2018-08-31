@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-31T11:16:50-04:00</updated><id>http://localhost:4000/</id><title type="html">Kai Li</title><subtitle>Work Projects Portfolio</subtitle><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><entry><title type="html">NP-Complete: The Set Packing Problem</title><link href="http://localhost:4000/npSPP/" rel="alternate" type="text/html" title="NP-Complete: The Set Packing Problem" /><published>2018-03-01T00:00:00-05:00</published><updated>2018-03-01T00:00:00-05:00</updated><id>http://localhost:4000/npSPP</id><content type="html" xml:base="http://localhost:4000/npSPP/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;This project requires writing a research paper for Advanced Algorithm offered at Miami University, Spring, 2018. The project requested to discuss narrowly over one specific NP-Complete problem, which
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-31T11:23:25-04:00</updated><id>http://localhost:4000/</id><title type="html">Kai Li</title><subtitle>Work Projects Portfolio</subtitle><author><name>Kai Li</name><email>kaivictorlee@163.com</email></author><entry><title type="html">NP-Complete: The Set Packing Problem</title><link href="http://localhost:4000/npSPP/" rel="alternate" type="text/html" title="NP-Complete: The Set Packing Problem" /><published>2018-03-01T00:00:00-05:00</published><updated>2018-03-01T00:00:00-05:00</updated><id>http://localhost:4000/npSPP</id><content type="html" xml:base="http://localhost:4000/npSPP/">&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
+&lt;p&gt;This project requires writing a research paper for &lt;em&gt;&lt;strong&gt;Advanced Algorithm&lt;/strong&gt;&lt;/em&gt; offered at Miami University, Spring, 2018. The project requested to discuss narrowly over one specific NP-Complete problem, which
 &lt;em&gt;the Set Packing Problem&lt;/em&gt; (SPP) is selected for this project. Specifically, its problem description,
 its variants, it applications, and the derivation proof of NP-completeness procedure were
 used to broadly discuss about SPP.&lt;/p&gt;
@@ -7,7 +7,7 @@ used to broadly discuss about SPP.&lt;/p&gt;
 &lt;h2 id=&quot;goal&quot;&gt;Goal&lt;/h2&gt;
 &lt;ol&gt;
   &lt;li&gt;select one &lt;em&gt;NP-complete problem&lt;/em&gt; to understand both the problem and its &lt;em&gt;NP-completeness&lt;/em&gt;.&lt;/li&gt;
-  &lt;li&gt;discover its applications to relates mathematical concepts to application.&lt;/li&gt;
+  &lt;li&gt;discover its applications relate mathematical concepts to its applications.&lt;/li&gt;
   &lt;li&gt;learn to prove &lt;em&gt;NP-completeness&lt;/em&gt;: first prove its existence in NP, then find existed &lt;em&gt;NP-complete problem&lt;/em&gt; and translate/reduce it to the problem attempting to prove.&lt;/li&gt;
 &lt;/ol&gt;
 
