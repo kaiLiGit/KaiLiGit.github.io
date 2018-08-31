@@ -10,7 +10,7 @@ header:
 
 :point_right: <a href="https://share.weiyun.com/5F2CPTs" target="_blank"> Download/View Printable Résumé, English </a>
 
-:point_right: <a href="https://share.weiyun.com/5G6DCwD" target="_blank"> 下载或查看简历, 中文 </a>
+:point_right: <a href="https://share.weiyun.com/5hN7enJ" target="_blank"> 下载或查看简历, 中文 </a>
 
 <!-- :point_right:[View/Download Printable Résumé](https://docs.google.com/document/d/1x6mZDFOiuFDyPzFvxwrVlpnqEfS1_xxGiucMSlo1ER8/edit?usp=sharing) -->
 
