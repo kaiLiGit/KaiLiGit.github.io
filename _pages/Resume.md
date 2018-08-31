@@ -8,9 +8,9 @@ header:
 ---
 :city_sunrise: **Location**: &nbsp; Shenzhen
 
-:point_right: <a href="https://share.weiyun.com/5zAHpvz" target="_blank"> Download/View Printable Résumé, English </a>
+:point_right: <a href="https://share.weiyun.com/54Aa8OY" target="_blank"> Download/View Printable Résumé, English </a>
 
-:point_right: <a href="https://share.weiyun.com/5SF5PD9" target="_blank"> 下载或查看简历, 中文 </a>
+:point_right: <a href="https://share.weiyun.com/5w5SXL2" target="_blank"> 下载或查看简历, 中文 </a>
 
 <!-- :point_right:[View/Download Printable Résumé](https://docs.google.com/document/d/1x6mZDFOiuFDyPzFvxwrVlpnqEfS1_xxGiucMSlo1ER8/edit?usp=sharing) -->
 
