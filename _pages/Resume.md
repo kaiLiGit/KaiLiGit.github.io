@@ -1,7 +1,7 @@
 ---
 layout: single
 permalink: /resume/
-title: "Resume/CV"
+title: "Résumé/CV"
 author_profile: true
 header:
   image: "/images/califox.jpg"
